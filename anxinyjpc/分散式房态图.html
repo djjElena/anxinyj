@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>分散式房态图</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>房源系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>分散式房态图</h1>
+            </div>
+            <div class="fssftt">
+                <div class="fssftt-left">
+                    <div class="fd">
+                        <p>所属分店</p>
+                        <p>海淀大部</p>
+                    </div>
+                    <div class="tjxfy">
+                        <a href="#">添加新房源</a>
+                    </div>
+                    <div class="fjss">
+                        <p><em></em>房间搜索 </p>
+                        <input type="text" placeholder="小区/门牌等"/><span>搜索</span>
+                    </div>
+                    <div class="fjss">
+                        <p><em></em>小区列表 </p>
+                        <ul>
+                            <li>
+                                区域 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select>
+                            </li>
+                            <li>
+                                商圈 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select></li>
+                            <li>
+                                地铁 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select>
+                            </li>
+                            <li>
+                                站名 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select>
+                            </li>
+                            <li>
+                                小区 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fjss ywsx">
+                        <p><em></em>业务筛选 <span><i  class="iconfont icon-zhongzhi"></i> 重置</span></p>
+                        <ul>
+                            <li>
+                                类型 &nbsp;
+                                <select name="">
+                                    <option value="全部" selected>全部</option>
+                                    <option value="全部">全部1</option>
+                                    <option value="全部">全部2</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>空房源可租
+                                    </span>
+                                    <!--<label class="el-radio">-->
+                                        <!--<span class="el-radio__input is-checked">-->
+                                            <!--<span class="el-radio__inner"></span>-->
+                                            <!--<input type="radio" class="el-radio__original" value="2">-->
+                                        <!--</span>-->
+                                        <!--<span class="el-radio__label">空房源可租</span>-->
+                                    <!--</label>-->
+                                    <!--<div class="el-radio-group"><label class="el-radio"><span class="el-radio__input is-checked"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" value="2"></span><span class="el-radio__label">合租&lt;!&ndash;&ndash;&gt;</span></label> <label class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" class="el-radio__original" value="3"></span><span class="el-radio__label">整租&lt;!&ndash;&ndash;&gt;</span></label></div>-->
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>空地址可租
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>房地都可租
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>欠费提醒
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>合同快到期
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="radio"/>租客待确认
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fssftt-right">
+                    <div>
+                        <div class="fq"><span>房山区-合景领峰</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">添加房源</a></div>
+                        <div class="fy-msg">
+                            <ul>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="green white">地址</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="qianlv">房屋¥3800/月</span> <br/>
+                                        <span class="qianlv">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="yellow white">房屋</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <!--<li class="fw-dz rt">-->
+                                            <!--<p class="green white">地址</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥-----/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <!--<li class="fw-dz lt">-->
+                                            <!--<p class="green white">房屋</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                            <li class="fw-dz rt">
+                                                <p class="green white">地址</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥-----/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <!--<li class="fw-dz lt">-->
+                                            <!--<p class="green white">房屋</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥-----/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="fq"><span>门头沟区-远洋新天地</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">添加房源</a></div>
+                        <div class="fy-msg2">
+                            <ul>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="green white">地址</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="qianlv">房屋¥3800/月</span> <br/>
+                                        <span class="qianlv">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="yellow white">房屋</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <li class="fw-dz lt">
+                                                <p class="green white">房屋</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                            <!--<li class="fw-dz rt">-->
+                                            <!--<p class="green white">地址</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥3800/月</span> <br/>
+                                        <span class="huise">地址¥-----/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightgreen">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <!--<li class="fw-dz lt">-->
+                                            <!--<p class="green white">房屋</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                            <li class="fw-dz rt">
+                                                <p class="green white">地址</p>
+                                                <p class="baisebg lvse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥-----/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top lightyellow">
+                                        <h1>1号楼-1单元</h1>
+                                        <h2>301</h2>
+                                        <ul>
+                                            <!--<li class="fw-dz lt">-->
+                                            <!--<p class="green white">房屋</p>-->
+                                            <!--<p class="baisebg lvse">空</p>-->
+                                            <!--</li>-->
+                                            <li class="fw-dz rt">
+                                                <p class="yellow white">地址</p>
+                                                <p class="baisebg huangse">空</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="huise">房屋¥-----/月</span> <br/>
+                                        <span class="huise">地址¥3800/年</span>
+                                    </div>
+                                    <div class="detail2">
+                                        <b></b>
+                                        <div class="d1">
+                                            <p>1号楼-1单元401</p>
+                                            <p>编辑操作</p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>房源信息： </span> <br/>
+                                                <span>实际户型：1室1厅1卫 </span> <br/>
+                                                <span>建筑面积：50㎡ </span> <br/>
+                                                <span>业主姓名：李四 </span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span> <br/>
+                                                <span>承租人姓名：王五</span> <br/>
+                                                <span>委托租期：2018-7-18~2020-7-18 </span>
+                                            </p>
+                                            <p>
+                                                <a href="#">编辑房源</a> <br/>
+                                                <a href="#">业主信息编辑</a> <br/>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d2">
+                                            <p>
+                                                <span>注册地址信息：  </span> <br/>
+                                                <span>承租人姓名：王五 </span> <br/>
+                                                <span>租约起始：2018-8-19~2019-8-19</span> <br/>
+                                            </p>
+                                            <p>
+                                                <a href="#">租约详情</a> <br/>
+                                                <a href="#">退房操作</a>
+                                            </p>
+                                        </div>
+                                        <div class="d1 d3">
+                                            <p>
+                                                <span>房源负责人：王五 </span> <br/>
+                                                <span>所属分部：海淀大部</span>
+                                            </p>
+                                            <p>
+                                                <!--<a href="#">租约详情</a> <br/>-->
+                                                <!--<a href="#">退房操作</a>-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.fy-msg>ul>li').each(function(){
+            $(this).hover(function(){
+                $('.detail').css('left',($(this).offset().left-410)+'px');
+                $('.detail').css('top',($(this).offset().top-101)+'px');
+//                alert($(this).offset().top);
+        })
+        })
+        $('.fy-msg2>ul>li').each(function(){
+            $(this).hover(function(){
+                $('.detail2').css('left',($(this).offset().left-410)+'px');
+                $('.detail2').css('top',($(this).offset().top-83)+'px');
+//                alert($(this).offset().top);
+            })
+        })
+    </script>
+</body>
+</html>

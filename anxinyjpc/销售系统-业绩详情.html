@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <!--<title>账单列表</title>-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_50mypsq6og.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>销售系统     &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>租约列表 </h1>
+            </div>
+            <div class="main-content">
+                <div class="brand">
+                    <a href="#"> <span>租约详情 </span> </a>
+                    <a href="#"> <span>服务信息</span> </a>
+                    <a href="#"> <span>合同信息</span> </a>
+                    <a href="#" class="active"> <span>业绩详情</span> </a>
+                    <button class="layui-btn layui-btn-primary an rt">修改</button>
+                    <button class="layui-btn layui-btn-primary an rt">续租</button>
+                    <button class="layui-btn layui-btn-primary an rt ye">退房</button>
+                    <button class="layui-btn layui-btn-primary an rt">删除</button>
+                    <button class="layui-btn layui-btn-primary an rt he">业绩申请</button>
+                    <button class="layui-btn layui-btn-primary an rt weiyue">违约金业绩申请</button>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th lay-data="" rowspan="2">日期/录入次数</th>
+                        <th lay-data="{align:'center'}" colspan="5">免租期业绩</th>
+                        <th lay-data="{align:'center'}" colspan="4">价差业绩</th>
+                        <th lay-data="" rowspan="2">非退业费</th>
+                        <th lay-data="" rowspan="2">配置成本</th>
+                        <th lay-data="" rowspan="2">维修保洁</th>
+                        <th lay-data="" rowspan="2">服务费</th>
+                        <th lay-data="" rowspan="2">总业绩数</th>
+                        <th lay-data="" rowspan="2">操作</th>
+                    </tr>
+                    <tr>
+                        <th lay-data="">总免租期天数</th>
+                        <th lay-data="">应记免租期天数</th>
+                        <th lay-data="">实际免租期天数 </th>
+                        <th lay-data="">免租期每日房价</th>
+                        <th lay-data=""> 免租期业绩数</th>
+                        <th lay-data=""> 出房价 </th>
+                        <th lay-data=""> 收房价</th>
+                        <th lay-data="">租赁时间 </th>
+                        <th lay-data=""> 价差业绩数 </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">2019/01/11 <br/>第一次录入</td>
+                        <td>100</td>
+                        <td>50 </td>
+                        <td>35 </td>
+                        <td>200.00 </td>
+                        <td>3000.00</td>
+                        <td>3000.00</td>
+                        <td>3500.00</td>
+                        <td>季付 </td>
+                        <td>1500.00</td>
+                        <td>2500.00</td>
+                        <td>-2500.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>2000.00</td>
+                        <td class="chakan ye"><span>查看详情</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">角色1：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="3">角色2：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="4">角色3：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="4">角色4：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2019/01/11 <br/>第二次录入</td>
+                        <td>100</td>
+                        <td>50 </td>
+                        <td>35 </td>
+                        <td>200.00 </td>
+                        <td>3000.00</td>
+                        <td>3000.00</td>
+                        <td>3500.00</td>
+                        <td>季付 </td>
+                        <td>1500.00</td>
+                        <td>2500.00</td>
+                        <td>-2500.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>2000.00</td>
+                        <td class="chakan ye"><span>查看详情</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">角色1：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="3">角色2：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="4">角色3：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                        <td colspan="4">角色4：张三 &nbsp;&nbsp;&nbsp;&nbsp; 分配业绩：1000.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 退房弹出框-->
+    <div class="flex yes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">发起退房</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn ye_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">财务终止日期：</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="tuifangdate" class="layui-input jianpan" placeholder="请输入日期">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">退房原因：</label>
+                        <div class="layui-input-block">
+                            <textarea   class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">租金欠款：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应退款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  readonly="readonly" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">扣款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">实际退款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">退还途径：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">微信</option>
+                                <option value="1">支付宝</option>
+                                <option value="2">银行卡</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">上传交接单：</label>
+                        <div class="layui-input-block">
+                            <img src="images/sc1.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 业绩申请-->
+    <div class="flex hes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn hes_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">合同号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="HT123456789" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">房源地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="朝阳区-天时苑小区-45号楼2单元101" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="ye" lay-filter="filter" value="收房人"  title="收房人" >
+                            <input type="radio" name="ye" lay-filter="filter" value="出房人"  checked title="出房人" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩申请人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="张三" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">免租期业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期每日房价" class="layui-input kd">
+                            <input type="text" placeholder="免租期总业绩" class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">价差业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期天数" class="layui-input kd">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">业绩1</option>
+                                <option value="1">业绩1</option>
+                                <option value="2">业绩1</option>
+                                <option value="3">业绩1</option>
+                                <option value="4">业绩1</option>
+                            </select>
+                            <input style="margin-top:15px;" type="text" placeholder="免租期总业绩" class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">非退业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入非退业绩" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">配置成本：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入配置成本" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">维修保洁成本：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入维修保洁成本" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩统计：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item role-item">
+                        <label class="layui-form-label">角色：</label>
+                        <div class="layui-input-block ji-jia">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">李四</option>
+                                <option value="2">王五</option>
+                                <option value="3">赵六</option>
+                            </select>
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                            <div class="jia"><i class="iconfont icon-jiahao1"></i></div>
+                            <div class="jian"><i class="iconfont icon-jianhao"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 续租-->
+    <div class="flex xues">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn xues_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="ye" value="收房人" checked title="收房人" >
+                            <input type="radio" name="ye" value="出房人" title="出房人" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请人：</label>
+                        <div class="layui-input-block">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">张三</option>
+                                <option value="2">张三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">服务费：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 违约金-->
+    <div class="flex weiyues">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">违约金业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn weiyues_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请人：</label>
+                        <div class="layui-input-block">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">张三</option>
+                                <option value="2">张三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">违约金业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+            form.on('radio(filter)', function(data){
+                var aa = data.value;
+                if(aa=='收房人'){
+                    $('.xues').show();
+                    $('.hes').hide();
+                }
+            });
+        }();
+        layui.use(['form','table'], function(){
+            var form = layui.form;
+            var table = layui.table;
+        });
+        $(".ye").click(function(){
+            $(".yes").show();
+        })
+        $(".ye_close").click(function(){
+            $(".yes").hide();
+        })
+        $(".he").click(function(){
+            $(".hes").show();
+        })
+        $(".hes_close").click(function(){
+            $(".hes").hide();
+        })
+//        $(".xue").click(function(){
+//            $(".xues").show();
+//        })
+        $(".xues_close").click(function(){
+            $(".xues").hide();
+        })
+        $(".weiyue").click(function(){
+            $(".weiyues").show();
+        })
+        $(".weiyues_close").click(function(){
+            $(".weiyues").hide();
+        })
+        /*增加删除服务区域*/
+        $('.jia').click(function(event) {
+            var myDom = $(this).parent('.ji-jia').clone(true);
+            myDom.find('input').val('');
+            $(this).parent('.ji-jia').after(myDom);
+        });
+        $('.jian').click(function(event) {
+            var className = $(this).parent('.ji-jia').attr('class').split(' ')[1];
+            if($('.' + className).length <= 1){
+                return ;
+            }
+            $(this).parent('.ji-jia').remove();
+        });
+
+    </script>
+</body>
+</html>

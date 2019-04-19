@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>业主管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/table.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/laydate/laydate.js"></script>
+    <!-- 百度地图 -->
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nxW0akynjKF8Ag0G0uVVwq0t6ak1Q1Zj"></script>-->
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>房源系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<span>业主管理</span></h1>
+            </div>
+            <div class="xiangqing">
+                <ul>
+                    <li class="yezhu">
+                        <label>合同筛选：</label>
+                        <span><input type="radio"/>全部合同</span> &nbsp; &nbsp; &nbsp;
+                        <span><input type="radio"/>未开始</span> &nbsp; &nbsp; &nbsp;
+                        <span><input type="radio"/>在租中</span> &nbsp; &nbsp; &nbsp;
+                        <span><input type="radio"/>已到期</span> &nbsp; &nbsp; &nbsp;
+                        <span><input type="radio"/>已结束</span>
+                        <span class="hetong">
+                           <a href="#">新增业主合同</a>
+                           <a href="#">导出合同</a>
+                        </span>
+                    </li>
+                    <li class="xq yezhu">
+                        <label for="">房源类型:</label>
+                        <span>
+                            <select name="">
+                                <option value="" selected>请选择</option>
+                                <option value="">房源出租</option>
+                                <option value="">地址出租</option>
+                                <option value="">房源+地址出租</option>
+                            </select>
+                        </span>
+                        <label for="">房源地址:</label>
+                        <span>
+                            <select name="">
+                                <option value="" selected>请选择</option>
+                                <option value="">房山区</option>
+                                <option value="">门头沟区</option>
+                            </select>
+                            <select name="">
+                                <option value="" selected>请选择</option>
+                                <option value="">合景领峰</option>
+                                <option value="">远洋新天地</option>
+                                <option value="">中央城</option>
+                            </select>
+                            <a href="#">查询</a>
+                        </span>
+                        <span class="hetong chaxun">
+                            <input type="text" placeholder="业主名/电话/房源地址等······"/>
+                            <a href="#">查询</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="owner__filterBtm">
+                <span>合同总数：<em>22</em>份</span>
+                <span>本月新增：<em>10</em>份</span>
+                <span>本月结束：<em>2</em>份</span>
+            </div>
+
+            <div class="owner__table">
+                <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 98%; position: relative;margin:0 auto;">
+                    <!--<div class="hidden-columns"><div></div> <div></div> <div></div> <div></div> <div></div> &lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <div></div></div>-->
+                    <div class="el-table__header-wrapper">
+                        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                            <colgroup>
+                                <col name="el-table_1_column_1" >
+                                <col name="el-table_1_column_2" >
+                                <col name="el-table_1_column_3" >
+                                <col name="el-table_1_column_4" >
+                                <col name="el-table_1_column_5" >
+                                <col name="el-table_1_column_6" >
+                                <col name="el-table_1_column_7" >
+                                <col name="gutter" width="">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                    <div class="cell">业主姓名</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                    <div class="cell">房源地址</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                    <div class="cell">租期情况</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                    <div class="cell">房源类型</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_5 is-leaf">
+                                    <div class="cell">下期应付日</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_6 is-leaf">
+                                    <div class="cell">合同状态</div>
+                                </th>
+                                <th colspan="1" rowspan="1" class="el-table_1_column_7 is-leaf">
+                                    <div class="cell">操作</div>
+                                </th>
+                                <th class="gutter" style="width: 0px;"></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="el-table__body-wrapper">
+                        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                            <colgroup>
+                                <col name="el-table_1_column_1" >
+                                <col name="el-table_1_column_2" >
+                                <col name="el-table_1_column_3" >
+                                <col name="el-table_1_column_4" >
+                                <col name="el-table_1_column_5" >
+                                <col name="el-table_1_column_6" >
+                                <col name="el-table_1_column_7" >
+                            </colgroup>
+                            <tbody>
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr><!---->
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr><!---->
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中</span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr><!---->
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                        <!--<p class="grayworld">付一</p>-->
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中<!----></span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"> <a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="el-table__row">
+                                <td class="el-table_1_column_1">
+                                    <div class="cell">张三</div>
+                                </td>
+                                <td class="el-table_1_column_2">
+                                    <div class="cell"><span class="el-tooltip item">世纪金源一号楼三单元301</span></div>
+                                </td>
+                                <td class="el-table_1_column_3">
+                                    <div class="cell">
+                                        自2019-02-21至2020-02-20
+                                    </div>
+                                </td>
+                                <td class="el-table_1_column_4">
+                                    <div class="cell"> <div>房屋出租</div> </div>
+                                </td>
+                                <td class="el-table_1_column_5">
+                                    <div class="cell"> <div>2019-03-16</div> </div>
+                                </td>
+                                <td class="el-table_1_column_6">
+                                    <div class="cell"><span class="el-tag el-tag--primary">在租中</span></div>
+                                </td>
+                                <td class="el-table_1_column_7">
+                                    <div class="cell">
+                                        <button type="button" class="el-button el-button--default el-button--small active"><a href="#"><span>合同详情</span></a></button>
+                                        <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>查看账单</span></a></button>
+                                    </div>
+                                </td>
+                            </tr><!---->
+                            </tbody>
+                        </table><!---->
+                    </div>
+                </div>
+                <div>
+                    <div class="mypage  ph_dis">
+                        <a href="#" class="linking">1</a>
+                        <a href="#" class="unlink">2</a>
+                        <a href="#" class="unlink">3</a>
+                        <a href="#" class="unlink">4</a>
+                        <a href="#" class="unlink">5</a>
+                        <a href="#" class="unlink">6</a>
+                        <a href="#" class="unlink">7</a>
+                        <a href="#" class="unlink">8</a>
+                        <a href="#" class="unlink">9</a>
+                        <a href="#" class="unlink">10</a>
+                        <a href="#">下一页</a>
+                        <a href="#">尾页</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

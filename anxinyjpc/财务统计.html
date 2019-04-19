@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>财务列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>财务系统   &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a> 财务列表</h1>
+            </div>
+            <div class="main-content">
+                <div class="money_title">
+                    <p>总进账合计：<span>100,000.00</span>元      总出账合计：<span>20,000.00</span>元</p>
+                </div>
+                <div class="brand">
+                    <a href="#" class="active"> <span>品牌公寓业绩</span> </a>
+                    <a href="#"> <span>品牌公寓续租业绩</span> </a>
+                    <a href="#"> <span>民宿业绩</span> </a>
+                    <a href="#"> <span>企业咨询业绩</span> </a>
+                    <a href="#"> <span>新房业绩</span> </a>
+                    <a href="#"> <span>二手房业绩</span> </a>
+                    <a href="#"> <span>普租业绩</span> </a>
+                    <button class="layui-btn rt ye">财务申请</button>
+                </div>
+                <div class="money_title money_titles">
+                    <p>当月进账合计：<span>100,000.00</span>元 当月出账合计：<span>20,000.00</span>元</p>
+                </div>
+                <form class="layui-form " action="">
+                    <div class="layui-row">
+                        <div class=" chose ">
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">房源地址：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">合同号：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">账单项目：</label>
+                                    <div class="layui-input-block">
+                                        <div class="">
+                                            <select>
+                                                <option value=""></option>
+                                                <option value="0">账单项目1</option>
+                                                <option value="1">账单项目2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">录入日期：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input" id="test6" placeholder=" 开始日期--结束日期 " lay-key="">
+                                    </div>
+                                </div>
+                                <button class="layui-btn">查询</button>
+                                <button class="layui-btn rt">导出列表</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th> 进出账 <span class="layui-table-sort layui-inline"><i class="layui-edge layui-table-sort-asc" title="升序"></i><i class="layui-edge layui-table-sort-desc" title="降序"></i></span> </th>
+                        <th>合同号</th>
+                        <th>房源地址/承租人（业主）</th>
+                        <th>项目</th>
+                        <th>金额</th>
+                        <th> 方式</th>
+                        <th>收支日期</th>
+                        <th>备注 </th>
+                        <th>店长审核</th>
+                        <th>总经理审核</th>
+                        <th> 管理员审核</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>进账</td>
+                        <td>5645645642335</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金</td>
+                        <td> <span class="col_lv">9,000.00</span></td>
+                        <td> 微信转账</td>
+                        <td>2019-01-08</td>
+                        <td>安心友家</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                    </tr>
+                    <tr>
+                        <td>出账</td>
+                        <td>5645645642335</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金</td>
+                        <td> <span class="col_lv">9,000.00</span></td>
+                        <td> 微信转账</td>
+                        <td>2019-01-08</td>
+                        <td>安心友家</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                    </tr>
+                    <tr>
+                        <td>出账</td>
+                        <td>5645645642335</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金</td>
+                        <td> <span class="col_lv">9,000.00</span></td>
+                        <td> 微信转账</td>
+                        <td>2019-01-08</td>
+                        <td>安心友家</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                    </tr>
+                    <tr>
+                        <td>出账</td>
+                        <td>5645645642335</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金</td>
+                        <td> <span class="col_lv">9,000.00</span></td>
+                        <td> 微信转账</td>
+                        <td>2019-01-08</td>
+                        <td>安心友家</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="money_title">
+                    <p>当月品牌公寓总业绩： <span>20,000.00</span>元</p>
+                </div>
+                <div>
+                    <div class="mypage  ph_dis">
+                        <a href="#">上一页</a>
+                        <a href="#" class="linking">1</a>
+                        <a href="#" class="unlink">2</a>
+                        <a href="#" class="unlink">3</a>
+                        <a href="#" class="unlink">4</a>
+                        <a href="#">下一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 财务弹出框    品牌公寓-->
+    <div class="flex yes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">财务申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn ye_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>财务申请</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="company" value="公司" title="公司">
+                            <input type="radio" name="company" value="店面" title="店面" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item select_pp">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <select lay-filter="test01">
+                                <option value="0" selected>品牌公寓</option>
+                                <option value="1">民宿</option>
+                                <option value="2">店面成本</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>进出账</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="zh" value="出账" title="出账">
+                            <input type="radio" name="zh" value="进账" title="进账" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">合同号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入合同号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">房源地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入房源地址" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">承租人/业主：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>项目：</label>
+                        <div class="layui-input-block">
+                            <select >
+                                <option value=""></option>
+                                <option value="0">项目1</option>
+                                <option value="1">项目2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>金额：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入金额" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>交易方式：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">微信</option>
+                                <option value="1">支付宝</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">上传交易凭证：</label>
+                        <div class="layui-input-block">
+                            <img src="images/pz.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 财务弹出框    民宿-->
+    <div class="flex min">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">财务申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn min_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>财务申请</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="company" value="公司" title="公司">
+                            <input type="radio" name="company" value="店面" title="店面" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item select_pp">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <select lay-filter="test02">
+                                <option value="0" >品牌公寓</option>
+                                <option value="1" selected>民宿</option>
+                                <option value="2">店面成本</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>进出账</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="zh" value="出账" title="出账">
+                            <input type="radio" name="zh" value="进账" title="进账" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">合同号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入合同号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业主姓名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">客户姓名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="客户姓名" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>项目：</label>
+                        <div class="layui-input-block">
+                            <select >
+                                <option value=""></option>
+                                <option value="0">项目1</option>
+                                <option value="1">项目2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>金额：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入金额" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>交易方式：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">微信</option>
+                                <option value="1">支付宝</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">上传交易凭证：</label>
+                        <div class="layui-input-block">
+                            <img src="images/pz.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 财务弹出框    店面成本-->
+    <div class="flex dian">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">财务申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn dian_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>财务申请</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="company" value="公司" title="公司">
+                            <input type="radio" name="company" value="店面" title="店面" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item select_pp">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <select lay-filter="test03">
+                                <option value="0" >品牌公寓</option>
+                                <option value="1" >民宿</option>
+                                <option value="2" selected>店面成本</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"> <span>*</span>进出账</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="zh" value="出账" title="出账">
+                            <input type="radio" name="zh" value="进账" title="进账" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>项目：</label>
+                        <div class="layui-input-block">
+                            <select >
+                                <option value=""></option>
+                                <option value="0">项目1</option>
+                                <option value="1">项目2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>金额：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入金额" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span>*</span>交易方式：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">微信</option>
+                                <option value="1">支付宝</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">上传交易凭证：</label>
+                        <div class="layui-input-block">
+                            <img src="images/pz.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        $(".ye").click(function(){
+            $(".yes").show();
+        });
+        $(".yes_close").click(function(){
+            $(".ye").hide();
+        });
+        $(".min_close").click(function(){
+            $(".min").hide();
+        });
+        $(".dian_close").click(function(){
+            $(".dian").hide();
+        });
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+            function resetValue01 () {
+                $('.yes select').each(function (i, j) {
+                    $(j).find("option:selected").attr("selected", false);
+                    $(j).find("option").first().attr("selected", true);
+                    form.render('select')
+                })
+            }
+            function resetValue02 () {
+                $('.min select').each(function (i, j) {
+                    $(j).find("option:selected").attr("selected", false);
+                    $(j).find("option").first().attr("selected", true);
+                    form.render('select')
+                })
+            }
+            function resetValue03 () {
+                $('.dian select').each(function (i, j) {
+                    $(j).find("option:selected").attr("selected", false);
+                    $(j).find("option").first().attr("selected", true);
+                    form.render('select')
+                })
+            }
+            form.on('select(test01)', function(data){
+                if(data.value==1){
+                    $(".min").show();
+                    $(".yes").hide();
+                    $(".dian").hide();
+                    resetValue01 ()
+                }else if(data.value==2){
+                    $(".dian").show();
+                    $(".min").hide();
+                    $(".yes").hide();
+                    resetValue01 ()
+                }else if(data.value==0){
+                    $(".yes").show();
+                    $(".dian").hide();
+                    $(".min").hide();
+                    resetValue01 ()
+                }
+            });
+            form.on('select(test02)', function(data){
+                if(data.value==1){
+                    $(".min").show();
+                    $(".yes").hide();
+                    $(".dian").hide();
+                    resetValue02 ()
+                }else if(data.value==2){
+                    $(".dian").show();
+                    $(".min").hide();
+                    $(".yes").hide();
+                    resetValue02 ()
+                }else if(data.value==0){
+                    $(".yes").show();
+                    $(".dian").hide();
+                    $(".min").hide();
+                    resetValue02 ()
+                }
+            });
+            form.on('select(test03)', function(data){
+                if(data.value==1){
+                    $(".min").show();
+                    $(".yes").hide();
+                    $(".dian").hide();
+                    resetValue03 ()
+                }else if(data.value==2){
+                    form.render();
+                    $(".dian").show();
+                    $(".min").hide();
+                    $(".yes").hide();
+                    resetValue03 ()
+                }else if(data.value==0){
+                    $(".yes").show();
+                    $(".dian").hide();
+                    $(".min").hide();
+                    resetValue03 ()
+                }
+            });
+
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#test6'
+                ,range: true
+            });
+        });
+        layui.use('table', function(){
+            var table = layui.table;
+            //监听单元格编辑
+            table.on('edit(test3)', function(obj){
+                var value = obj.value //得到修改后的值
+                        ,data = obj.data //得到所在行所有键值
+                        ,field = obj.field; //得到字段
+                layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
+            });
+        });
+    </script>
+</body>
+</html>

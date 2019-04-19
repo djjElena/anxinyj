@@ -1,0 +1,39 @@
+<div class="headerframe">
+    <div class="header_text lt">
+         <a to="?c=index&a=sysinfo" href="javascript:"><img src="images/logo.png" alt=""/></a>
+        <!--<div class="foldsider"><i class="icon icon-indent-left"></i></div>-->
+    </div>
+    <div class="header_right_text rt">
+        <div class="admin-header-right">
+            <div class="manager">
+    			<span class="avatar">
+    				<img src="images/admin.png">
+    			</span>
+                <dl>
+                    <dt class="name">员工1</dt>
+                </dl>
+                <i class="arrow" id="admin-manager-btn"></i>
+                <div class="manager-menu">
+                    <div class="title">
+                        <h4><a href="#">退出登录</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        //顶部下拉
+        $(".manager").click(function(){
+            if ($("#admin-manager-btn").hasClass("arrow-close")) {
+                $("#admin-manager-btn").removeClass("arrow-close").addClass("arrow")
+
+            } else if ($("#admin-manager-btn").hasClass("arrow")) {
+                $("#admin-manager-btn").removeClass("arrow").addClass("arrow-close")
+            }
+            $(".manager-menu").slideToggle()
+        })
+        $(".admin-header-right .operate li .msg").hover(function(){
+            $("#msg_Container").slideToggle()
+        })
+    </script>

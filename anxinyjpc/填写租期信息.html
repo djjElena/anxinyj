@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>填写租期信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/table.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/laydate/laydate.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>房源系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>业主管理</h1>
+            </div>
+            <div class="tjyzxx">
+                <ul>
+                    <li class="active">
+                        <div class="xx">
+                            <b><i>1</i></b>
+                            <span>填写业主信息</span>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <div class="dian">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="xx">
+                            <b><i>2</i></b>
+                            <span>填写租房信息</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dian">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="xx">
+                            <b><i>3</i></b>
+                            <span>上传合同附件</span>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="dian">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                    <div class="xx">
+                        <b><i>4</i></b>
+                        <span>填写其他备注信息</span>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            <!-- 主体-->
+            <div>
+                <div class="ht">
+                    <div class="mphxxx ht-xq yezhuzhangdan tianxiezuqimsg">
+                        <div>
+                            <h2>房屋租期信息</h2>
+                            <div class="jine">
+                                <a class="ownerd__toggleBtn"><b>展开</b> <i class="ownerd__toggleIcon"></i></a>
+                            </div>
+                        </div>
+                        <div class="xiangqing biaoge">
+                            <div class="shijian">
+                                <ul>
+                                    <li class="xq">
+                                        <label for="">合同起止日期：</label>
+                                        <input type="text" id="starttime" class="jianpan"/> 至 <input type="text" id="endtime" class="jianpan"/>
+                                    </li>
+                                    <li class="xq">
+                                        <label for="">每期账单支付时间：</label>
+                                        <span class="zfsj">
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 提前 <input type="text"/> 天支付租金 <br/>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 固定 <input type="text"/> 号支付租金(起租日期前)<br/>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 固定 <input type="text"/> 号支付租金(起租日期后)
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h1 class="h1">每期房租明细</h1>
+                                <div>
+                                    <table class="out-table">
+                                        <tr>
+                                            <td width="200" class="td1">
+                                                <h1>第1期</h1>
+                                                <p>租金：0.00元</p>
+                                                <p>减免金额：11,400.00元</p>
+                                            </td>
+                                            <td class="td2">
+                                                <ul>
+                                                    <li class="zq-li">
+                                                        <label><em class="org">*</em>租期起止日期：</label>
+                                                        <input type="text" id="start" class="jianpan"/> 至 <input type="text" id="end" class="jianpan"/>
+                                                        <label><em class="org">*</em>月租金金额：</label>
+                                                        <input type="text" />
+                                                        <label><em class="org">*</em>付款周期：</label>
+                                                        <select name="">
+                                                            <option value="" selected>请选择</option>
+                                                            <option value="">付一</option>
+                                                            <option value="">付二</option>
+                                                            <option value="">付三</option>
+                                                            <option value="">付四</option>
+                                                            <option value="">付五</option>
+                                                            <option value="">付六</option>
+                                                            <option value="">付七</option>
+                                                            <option value="">付八</option>
+                                                            <option value="">付九</option>
+                                                            <option value="">付十</option>
+                                                            <option value="">付十一</option>
+                                                            <option value="">付十二</option>
+                                                            <option value="">一次性付清</option>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <h1 class="h1 hh">账单计划</h1>
+                                                        <div class="owner__table" style="margin-top:-35px;">
+                                                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 80%; position: relative;margin:0 auto;">
+                                                                <div class="el-table__header-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                                                <div class="cell">期数</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                                                <div class="cell">账期</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                                                <div class="cell">账单</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                                                <div class="cell">应付款日</div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="el-table__body-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">1-1</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期 <br/>
+                                                                                    <span>免租期起止日期</span>
+                                                                                    <input type="text" id="date1" class="jianpan"/> 至 <input type="text" id="date2" class="jianpan"/>  <br/>
+                                                                                    <span>免租期共90天</span>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 0.00元</span> <br/>
+                                                                                    <span style="color:#bfc3d9;">(房屋租金=改期房租金额-减免金额)</span> <br/>
+                                                                                    <span>减免租金</span>
+                                                                                    <input type="text" value="11400.00"/>元
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr class="kelong">
+                                            <td width="200" class="td1">
+                                                <h1>第2期</h1>
+                                                <p>租金：34200.00元</p>
+                                                <p>减免金额：0.00元</p>
+                                            </td>
+                                            <td class="td2">
+                                                <ul>
+                                                    <li class="zq-li">
+                                                        <label><em class="org">*</em>租期起止日期：</label>
+                                                        <input type="text" id="start1" class="jianpan"/> 至 <input type="text" id="end1" class="jianpan"/>
+                                                        <label><em class="org">*</em>月租金金额：</label>
+                                                        <input type="text" />
+                                                        <label><em class="org">*</em>付款周期：</label>
+                                                        <select name="">
+                                                            <option value="" selected>请选择</option>
+                                                            <option value="">付一</option>
+                                                            <option value="">付二</option>
+                                                            <option value="">付三</option>
+                                                            <option value="">付四</option>
+                                                            <option value="">付五</option>
+                                                            <option value="">付六</option>
+                                                            <option value="">付七</option>
+                                                            <option value="">付八</option>
+                                                            <option value="">付九</option>
+                                                            <option value="">付十</option>
+                                                            <option value="">付十一</option>
+                                                            <option value="">付十二</option>
+                                                            <option value="">一次性付清</option>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <h1 class="h1 hh">账单计划</h1>
+                                                        <div class="owner__table" style="margin-top:-35px;">
+                                                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 80%; position: relative;margin:0 auto;">
+                                                                <div class="el-table__header-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                                                <div class="cell">期数</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                                                <div class="cell">账期</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                                                <div class="cell">账单</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                                                <div class="cell">应付款日</div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="el-table__body-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-1</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-2</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-3</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s1">
+                    <div class="cc lt">
+                        <span>下期账单应付日</span>
+                        <input type="text" class="jianpan" id="fk"/>
+                    </div>
+                    <div class="rt tianjiazuqi">
+                        <img src="images/tj.png" alt=""/> 添加租期
+                    </div>
+                </div>
+                <div class="s2">
+                    <span>其他费用：</span>
+                    <p class="fy">
+                        <!--<span> <i>水电供暖 </i><input type="text"/> 元 <b>-</b></span>-->
+                    </p>
+                    <div class="tianjiafy">
+                        <p><img src="images/a.png" alt=""/> 添加一条</p>
+                        <select name="" id="choose" size="4">
+                            <option value="水电供暖" selected>水电供暖</option>
+                            <option value="维修专用">维修专用</option>
+                            <option value="违约金">违约金</option>
+                            <option value="杂费">杂费</option>
+                            <option value="服务收费">服务收费</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ht">
+                    <div class="mphxxx ht-xq yezhuzhangdan tianxiezuqimsg">
+                        <div>
+                            <h2>地址租期信息</h2>
+                            <div class="jine">
+                                <a class="ownerd__toggleBtn1"><b>展开</b> <i class="ownerd__toggleIcon"></i></a>
+                            </div>
+                        </div>
+                        <div class="xiangqing biaoge1">
+                            <div class="shijian">
+                                <ul>
+                                    <li class="xq">
+                                        <label for="">合同起止日期：</label>
+                                        <input type="text" id="dstarttime" class="jianpan"/> 至 <input type="text" id="dendtime" class="jianpan"/>
+                                    </li>
+                                    <li class="xq">
+                                        <label for="">每期账单支付时间：</label>
+                                        <span class="zfsj">
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 提前 <input type="text"/> 天支付租金 <br/>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 固定 <input type="text"/> 号支付租金(起租日期前)<br/>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="aa" placeholder="请输入支付日"/> 固定 <input type="text"/> 号支付租金(起租日期后)
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h1 class="h1">每期房租明细</h1>
+                                <div>
+                                    <table class="out-table">
+                                        <tr>
+                                            <td width="200" class="td1">
+                                                <h1>第1期</h1>
+                                                <p>租金：0.00元</p>
+                                                <p>减免金额：11,400.00元</p>
+                                            </td>
+                                            <td class="td2">
+                                                <ul>
+                                                    <li class="zq-li">
+                                                        <label><em class="org">*</em>租期起止日期：</label>
+                                                        <input type="text" id="dstart" class="jianpan"/> 至 <input type="text" id="dend" class="jianpan"/>
+                                                        <label><em class="org">*</em>月租金金额：</label>
+                                                        <input type="text" />
+                                                        <label><em class="org">*</em>付款周期：</label>
+                                                        <select name="">
+                                                            <option value="" selected>请选择</option>
+                                                            <option value="">付一</option>
+                                                            <option value="">付二</option>
+                                                            <option value="">付三</option>
+                                                            <option value="">付四</option>
+                                                            <option value="">付五</option>
+                                                            <option value="">付六</option>
+                                                            <option value="">付七</option>
+                                                            <option value="">付八</option>
+                                                            <option value="">付九</option>
+                                                            <option value="">付十</option>
+                                                            <option value="">付十一</option>
+                                                            <option value="">付十二</option>
+                                                            <option value="">一次性付清</option>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <h1 class="h1 hh">账单计划</h1>
+                                                        <div class="owner__table" style="margin-top:-35px;">
+                                                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 80%; position: relative;margin:0 auto;">
+                                                                <div class="el-table__header-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                                                <div class="cell">期数</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                                                <div class="cell">账期</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                                                <div class="cell">账单</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                                                <div class="cell">应付款日</div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="el-table__body-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">1-1</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期 <br/>
+                                                                                    <span>免租期起止日期</span>
+                                                                                    <input type="text" id="ddate1" class="jianpan"/> 至 <input type="text" id="ddate2" class="jianpan"/>  <br/>
+                                                                                    <span>免租期共90天</span>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 0.00元</span> <br/>
+                                                                                    <span style="color:#bfc3d9;">(房屋租金=改期房租金额-减免金额)</span> <br/>
+                                                                                    <span>减免租金</span>
+                                                                                    <input type="text" value="11400.00"/>元
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="200" class="td1">
+                                                <h1>第2期</h1>
+                                                <p>租金：34200.00元</p>
+                                                <p>减免金额：0.00元</p>
+                                            </td>
+                                            <td class="td2">
+                                                <ul>
+                                                    <li class="zq-li">
+                                                        <label><em class="org">*</em>租期起止日期：</label>
+                                                        <input type="text" id="dstart1" class="jianpan"/> 至 <input type="text" id="dend1" class="jianpan"/>
+                                                        <label><em class="org">*</em>月租金金额：</label>
+                                                        <input type="text" />
+                                                        <label><em class="org">*</em>付款周期：</label>
+                                                        <select name="">
+                                                            <option value="" selected>请选择</option>
+                                                            <option value="">付一</option>
+                                                            <option value="">付二</option>
+                                                            <option value="">付三</option>
+                                                            <option value="">付四</option>
+                                                            <option value="">付五</option>
+                                                            <option value="">付六</option>
+                                                            <option value="">付七</option>
+                                                            <option value="">付八</option>
+                                                            <option value="">付九</option>
+                                                            <option value="">付十</option>
+                                                            <option value="">付十一</option>
+                                                            <option value="">付十二</option>
+                                                            <option value="">一次性付清</option>
+                                                        </select>
+                                                    </li>
+                                                    <li>
+                                                        <h1 class="h1 hh">账单计划</h1>
+                                                        <div class="owner__table" style="margin-top:-35px;">
+                                                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 80%; position: relative;margin:0 auto;">
+                                                                <div class="el-table__header-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                                                <div class="cell">期数</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                                                <div class="cell">账期</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                                                <div class="cell">账单</div>
+                                                                            </th>
+                                                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                                                <div class="cell">应付款日</div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="el-table__body-wrapper">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                                                        <colgroup>
+                                                                            <col name="el-table_1_column_1" width="100">
+                                                                            <col name="el-table_1_column_2" width="400">
+                                                                            <col name="el-table_1_column_3" width="300">
+                                                                            <col name="el-table_1_column_4" width="100">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-1</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-2</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="el-table__row">
+                                                                            <td class="el-table_1_column_1">
+                                                                                <div class="cell">2-3</div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_2">
+                                                                                <div class="cell cc">
+                                                                                    <span>2019-02-21至2020-02-20</span>
+                                                                                    <input type="checkbox"/> 免租期
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_3">
+                                                                                <div class="cell cc">
+                                                                                    <span>房屋租金 11,400.00元</span> <br/>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td class="el-table_1_column_4">
+                                                                                <div class="cell"> 2019-02-21</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tijiao">提交</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.ownerd__toggleBtn').click(function(){
+//            $('.ownerd__toggleBtn>b').text("收起");
+            $('.ownerd__toggleBtn>i').toggleClass('xuanzhuan');
+            if($('.ownerd__toggleBtn>b').text()=='展开'){
+                $('.biaoge').show();
+                $('.ownerd__toggleBtn>b').text("收起");
+            }
+            else if($('.ownerd__toggleBtn>b').text()=='收起'){
+                $('.biaoge').hide();
+                $('.ownerd__toggleBtn>b').text("展开");
+            }
+        })
+        $('.ownerd__toggleBtn1').click(function(){
+//            $('.ownerd__toggleBtn>b').text("收起");
+            $('.ownerd__toggleBtn1>i').toggleClass('xuanzhuan');
+            if($('.ownerd__toggleBtn1>b').text()=='展开'){
+                $('.biaoge1').show();
+                $('.ownerd__toggleBtn1>b').text("收起");
+            }
+            else if($('.ownerd__toggleBtn1>b').text()=='收起'){
+                $('.biaoge1').hide();
+                $('.ownerd__toggleBtn1>b').text("展开");
+            }
+        })
+        laydate.render({ elem: '#starttime' });
+        laydate.render({ elem: '#endtime'});
+        laydate.render({ elem: '#start' });
+        laydate.render({ elem: '#end'});
+        laydate.render({ elem: '#date1' });
+        laydate.render({ elem: '#date2' });
+        laydate.render({ elem: '#start1'});
+        laydate.render({elem: '#end1' });
+        laydate.render({ elem: '#dstarttime' });
+        laydate.render({ elem: '#dendtime'});
+        laydate.render({ elem: '#dstart' });
+        laydate.render({ elem: '#dend'});
+        laydate.render({ elem: '#ddate1' });
+        laydate.render({ elem: '#ddate2' });
+        laydate.render({ elem: '#dstart1'});
+        laydate.render({elem: '#dend1' });
+        laydate.render({elem: '#fk'});
+        $(function(){
+            $('.tianjiafy>select').hide();
+            $('.tianjiafy>p').click(function(){
+                $('.tianjiafy>select').show();
+                var aa = ($('.fy>span>i').text());
+                $('#choose option').click(function(){
+                    aa=$(this).text();
+                    $('.fy').append("<span><i>"+aa+"</i><input type='text'/> 元 <b>-</b></span>");
+                    $('.fy>span') .bind('click',function(){$(this).hide()});
+                })
+            })
+        })
+        $('.tianjiazuqi').click(function(){
+            var ss = $('.kelong').clone(true);
+            $('.kelong').after(ss);
+        })
+    </script>
+</body>
+</html>

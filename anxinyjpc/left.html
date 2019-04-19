@@ -1,0 +1,77 @@
+<div class="left-nav">
+        <ul class="sanjiao">
+            <li><a href="#"> <i class="iconfont icon-shouye"></i>首页 </a> </li>
+            <li class="active"><a href="javascript:;"> <i class="iconfont icon-company"></i>房源系统<b class="sj"></b> </a>
+                <div class="hide_list">
+                    <p class="active"><a href="#">分布式房态图</a></p>
+                    <p><a href="#">业主管理 </a></p>
+                </div>
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-toufangcelve-"></i>销售系统</a>
+                <!--<div class="hide_list">-->
+                <!--<p><a href="#">查看订单</a></p>-->
+                <!--<p><a href="#">已下载订单 </a></p>-->
+                <!--</div>-->
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-hetong1"></i>我的合同</a>
+                <!--<div class="hide_list">-->
+                <!--<p><a href="#">查看订单</a></p>-->
+                <!--<p><a href="#">已下载订单 </a></p>-->
+                <!--</div>-->
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-fuwu"></i>服务 <b class="sj"></b></a>
+                <div class="hide_list">
+                    <p class="active"><a href="#">保修/保洁申请</a></p>
+                    <p><a href="#">委托申请</a></p>
+                    <p><a href="#">预约看房</a></p>
+                </div>
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-yejiguanli"></i>我的业绩</a>
+                <!--<div class="hide_list">-->
+                <!--<p><a href="#">我的信息</a></p>-->
+                <!--</div>-->
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-icon-test1"></i>工资明细</a>
+                <!--<div class="hide_list">-->
+                <!--<p><a href="#">我的信息</a></p>-->
+                <!--</div>-->
+            </li>
+            <li><a href="javascript:;"> <i class="iconfont icon-zichanguanli"></i>财务系统<b class="sj"></b></a>
+                <div class="hide_list">
+                    <p class="active"><a href="#">账单管理</a></p>
+                    <p><a href="#">交易流水</a></p>
+                </div>
+            </li>
+            <li><a href="#"> <i class="iconfont icon-quanxian"></i>权限<b class="sj"></b></a>
+                <div class="hide_list">
+                    <p class="active"><a href="#">门店管理</a></p>
+                    <p><a href="#">房源分配</a></p>
+                    <p><a href="#">员工管理</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+<script>
+//    $(".left-nav li").click(function() {
+//        $(this).addClass("active").siblings().removeClass("active");
+//        //顶部下拉
+//    })
+    $(".left-nav li b").click(function(){
+        if ($(this).hasClass("sj-close")) {
+            $(this).removeClass("sj-close").addClass("sj");
+           $(this).parent().siblings('.hide_list').hide();
+
+        } else if ($(this).hasClass("sj")) {
+            $(this).removeClass("sj").addClass("sj-close");
+            $(this).parent().siblings('.hide_list').show();
+        }
+    });
+    $('.left-nav li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+//        $(this).children().show();
+//        $(this).siblings().children().hide();
+    })
+    $('.hide_list>p').click(function(){
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+</script>

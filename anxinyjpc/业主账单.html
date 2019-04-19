@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>业主账单</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/table.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/laydate/laydate.js"></script>
+    <script>
+        laydate.render({
+            elem: '.jianpan'
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>房源系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<span>业主管理</span></h1>
+            </div>
+            <div class="hetong-detail">
+                <span>世纪金源一号楼三单元301</span>
+                <span class="ann">
+                    <a href="#" class="active">房源信息</a>
+                    <a href="#">地址信息</a>
+                </span>
+                <ul>
+                    <li><a href="#">业主合同详情</a></li>
+                    <li class="active"><a href="#">业主账单</a></li>
+                </ul>
+            </div>
+            <div class="zuqi">
+                <div class="f1">
+                    <div class="circle">
+                        <b><i></i></b>
+                    </div>
+                    <div class="riqi">
+                        <p>第一期</p>
+                        <p>2019-02-21</p>
+                        <p>至</p>
+                        <p>2020-02-20</p>
+                    </div>
+                </div>
+                <div class="hx1"></div>
+                <div class="f1 f2">
+                    <div class="circle">
+                        <b><i></i></b>
+                    </div>
+                    <div class="riqi">
+                        <p>第二期</p>
+                        <p>2019-02-21</p>
+                        <p>至</p>
+                        <p>2020-02-20</p>
+                    </div>
+                </div>
+                <div class="hx1 hx2"></div>
+                <div class="f1 f2 f3">
+                    <div class="circle jieshu">
+                        <b><i></i></b>
+                    </div>
+                    <div class="riqi riqijieshu">
+                        <p>租期结束</p>
+                        <!--<p>2019-02-21</p>-->
+                        <!--<p>至</p>-->
+                        <!--<p>2020-02-20</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="tijiao tjzd">添加账单</div>
+            <div class="ht">
+                <div class="mphxxx ht-xq yezhuzhangdan">
+                    <div>
+                        <h2>第一期&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-01-08 至 2019-04-07（付三）</span></h2>
+                        <div class="jine">
+                            <h2>本期账单合计金额： </h2>
+                            <span>0.00元</span>
+                            <a class="ownerd__toggleBtn"><b>展开</b> <i class="ownerd__toggleIcon"></i></a>
+                        </div>
+                    </div>
+                    <div class="xiangqing yezhuxinxi zqxx biaoge">
+                        <div class="owner__table">
+                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 100%; position: relative;margin:0 auto;">
+                                <!--<div class="hidden-columns"><div></div> <div></div> <div></div> <div></div> <div></div> &lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <div></div></div>-->
+                                <div class="el-table__header-wrapper">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                        <colgroup>
+                                            <col name="el-table_1_column_1" width="100">
+                                            <col name="el-table_1_column_2" width="300">
+                                            <col name="el-table_1_column_3" width="300">
+                                            <col name="el-table_1_column_4" width="200">
+                                            <col name="el-table_1_column_5" width="200">
+                                            <col name="el-table_1_column_6" width="200">
+                                            <col name="el-table_1_column_7" width="300">
+                                            <col name="gutter" width="">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                <div class="cell">账单期数</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                <div class="cell">账单项目</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                <div class="cell">账单周期</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                <div class="cell">账单金额</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_5 is-leaf">
+                                                <div class="cell">应付款日</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_6 is-leaf">
+                                                <div class="cell">状态</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_7 is-leaf">
+                                                <div class="cell">操作</div>
+                                            </th>
+                                            <!--<th class="gutter" style="width: 0px;"></th>-->
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="el-table__body-wrapper">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                        <colgroup>
+                                            <col name="el-table_1_column_1" width="100">
+                                            <col name="el-table_1_column_2" width="300">
+                                            <col name="el-table_1_column_3" width="300">
+                                            <col name="el-table_1_column_4" width="200">
+                                            <col name="el-table_1_column_5" width="200">
+                                            <col name="el-table_1_column_6" width="200">
+                                            <col name="el-table_1_column_7" width="300">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="el-table__row">
+                                            <td class="el-table_1_column_1">
+                                                <div class="cell">账期一</div>
+                                            </td>
+                                            <td class="el-table_1_column_2">
+                                                <div class="cell">房屋租金</div>
+                                            </td>
+                                            <td class="el-table_1_column_3">
+                                                <div class="cell">2019-01-08至2019-04-07（免租期）</div>
+                                            </td>
+                                            <td class="el-table_1_column_4">
+                                                <div class="cell"> 0.00元（免租期） </div>
+                                            </td>
+                                            <td class="el-table_1_column_5">
+                                                <div class="cell">2019-01-03</div>
+                                            </td>
+                                            <td class="el-table_1_column_6">
+                                                <div class="cell">-</div>
+                                            </td>
+                                            <td class="el-table_1_column_7">
+                                                <div class="cell"> </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ht">
+                <div class="mphxxx ht-xq yezhuzhangdan">
+                    <div>
+                        <h2>第二期&nbsp;&nbsp;&nbsp;&nbsp;<span>2019-01-08 至 2019-04-07（付三）</span></h2>
+                        <div class="jine">
+                            <h2>本期账单合计金额： </h2>
+                            <span>34,200.00元</span>
+                            <a class="ownerd__toggleBtn1"><b>展开</b> <i class="ownerd__toggleIcon1"></i></a>
+                        </div>
+                    </div>
+                    <div class="xiangqing yezhuxinxi zqxx biaoge1">
+                        <div class="owner__table">
+                            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition" style="width: 100%; position: relative;margin:0 auto;">
+                                <!--<div class="hidden-columns"><div></div> <div></div> <div></div> <div></div> <div></div> &lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <div></div></div>-->
+                                <div class="el-table__header-wrapper">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;">
+                                        <colgroup>
+                                            <col name="el-table_1_column_1" width="100">
+                                            <col name="el-table_1_column_2" width="300">
+                                            <col name="el-table_1_column_3" width="300">
+                                            <col name="el-table_1_column_4" width="200">
+                                            <col name="el-table_1_column_5" width="200">
+                                            <col name="el-table_1_column_6" width="200">
+                                            <col name="el-table_1_column_7" width="300">
+                                            <col name="gutter" width="">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+                                                <div class="cell">账单期数</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+                                                <div class="cell">账单项目</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+                                                <div class="cell">账单周期</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+                                                <div class="cell">账单金额</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_5 is-leaf">
+                                                <div class="cell">应付款日</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_6 is-leaf">
+                                                <div class="cell">状态</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_7 is-leaf">
+                                                <div class="cell">操作</div>
+                                            </th>
+                                            <!--<th class="gutter" style="width: 0px;"></th>-->
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="el-table__body-wrapper">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 100%;">
+                                        <colgroup>
+                                            <col name="el-table_1_column_1" width="100">
+                                            <col name="el-table_1_column_2" width="300">
+                                            <col name="el-table_1_column_3" width="300">
+                                            <col name="el-table_1_column_4" width="200">
+                                            <col name="el-table_1_column_5" width="200">
+                                            <col name="el-table_1_column_6" width="200">
+                                            <col name="el-table_1_column_7" width="300">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr class="el-table__row">
+                                            <td class="el-table_1_column_1">
+                                                <div class="cell">账期一</div>
+                                            </td>
+                                            <td class="el-table_1_column_2">
+                                                <div class="cell">房屋租金</div>
+                                            </td>
+                                            <td class="el-table_1_column_3">
+                                                <div class="cell">2019-01-08至2019-04-07</div>
+                                            </td>
+                                            <td class="el-table_1_column_4">
+                                                <div class="cell"> 11,400.00元</div>
+                                            </td>
+                                            <td class="el-table_1_column_5">
+                                                <div class="cell">2019-01-03</div>
+                                            </td>
+                                            <td class="el-table_1_column_6">
+                                                <div class="cell">未付款</div>
+                                            </td>
+                                            <td class="el-table_1_column_7">
+                                                <div class="cell">
+                                                    <button type="button" class="el-button el-button--default el-button--small zf"><a href="#"><span>支付</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>编辑账单</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>结束账单</span></a></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td class="el-table_1_column_1">
+                                                <div class="cell">账期二</div>
+                                            </td>
+                                            <td class="el-table_1_column_2">
+                                                <div class="cell">房屋租金</div>
+                                            </td>
+                                            <td class="el-table_1_column_3">
+                                                <div class="cell">2019-01-08至2019-04-07</div>
+                                            </td>
+                                            <td class="el-table_1_column_4">
+                                                <div class="cell"> 11,400.00元</div>
+                                            </td>
+                                            <td class="el-table_1_column_5">
+                                                <div class="cell">2019-01-03</div>
+                                            </td>
+                                            <td class="el-table_1_column_6">
+                                                <div class="cell">未付款</div>
+                                            </td>
+                                            <td class="el-table_1_column_7">
+                                                <div class="cell">
+                                                    <button type="button" class="el-button el-button--default el-button--small zf"><a href="#"><span>支付</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>编辑账单</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small"><a href="#"><span>结束账单</span></a></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td class="el-table_1_column_1">
+                                                <div class="cell">账期三</div>
+                                            </td>
+                                            <td class="el-table_1_column_2">
+                                                <div class="cell">房屋租金</div>
+                                            </td>
+                                            <td class="el-table_1_column_3">
+                                                <div class="cell">2019-01-08至2019-04-07</div>
+                                            </td>
+                                            <td class="el-table_1_column_4">
+                                                <div class="cell"> 11,400.00元</div>
+                                            </td>
+                                            <td class="el-table_1_column_5">
+                                                <div class="cell">2019-01-03</div>
+                                            </td>
+                                            <td class="el-table_1_column_6">
+                                                <div class="cell">未付款</div>
+                                            </td>
+                                            <td class="el-table_1_column_7">
+                                                <div class="cell">
+                                                    <button type="button" class="el-button el-button--default el-button--small zf"> <a href="#"><span>支付</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small shanchu"> <a href="#"><span>编辑账单</span></a></button>
+                                                    <button type="button" class="el-button el-button--default el-button--small"> <a href="#"><span>结束账单</span></a></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tianjiaxiaoqu">
+        <div class="tianjia tianjiazhangdan">
+            <div class="biaoti">
+                <h3>添加账单</h3>
+                <span class="zd-close">×</span>
+            </div>
+            <ul>
+                <li class="xq">
+                    <label><em class="org">*</em>账单项目：</label>
+                    <span>
+                        <select name="">
+                            <option value="" selected>请选择</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                        <select name="">
+                            <option value="" selected>请选择</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <label><em class="org">*</em>账单金额：</label>
+                    <span><input type="text" placeholder="请输入价格"/>元</span>
+                </li>
+                <li class="xq">
+                    <label><em class="org">*</em>应付款日期：</label>
+                    <span><input type="text" placeholder="请选择日期" class="jianpan"/></span>
+                </li>
+                <li class="yfk">
+                    <p><input type="checkbox"/><span>账单已付款</span></p>
+                </li>
+                <li class="xq">
+                    <label>添加图片：</label>
+                    <span>
+                        <img src="images/tp.png" alt=""/>
+                    </span>
+                </li>
+                <li class="xq miaoshu beizhu">
+                    <label>账单备注：</label>
+                    <span><textarea name="" id="" cols="30" rows="10"></textarea></span>
+                </li>
+            </ul>
+            <div class="fangshi rt fs">
+                <p>保存</p>
+                <p>取消</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.ownerd__toggleBtn').click(function(){
+//            $('.ownerd__toggleBtn>b').text("收起");
+            $('.ownerd__toggleBtn>i').toggleClass('xuanzhuan');
+            if($('.ownerd__toggleBtn>b').text()=='展开'){
+                $('.biaoge').show();
+                $('.ownerd__toggleBtn>b').text("收起");
+            }
+            else if($('.ownerd__toggleBtn>b').text()=='收起'){
+                $('.biaoge').hide();
+                $('.ownerd__toggleBtn>b').text("展开");
+            }
+        })
+        $('.ownerd__toggleBtn1').click(function(){
+//            $('.ownerd__toggleBtn>b').text("收起");
+            $('.ownerd__toggleBtn1>i').toggleClass('xuanzhuan');
+            if($('.ownerd__toggleBtn1>b').text()=='展开'){
+                $('.biaoge1').show();
+                $('.ownerd__toggleBtn1>b').text("收起");
+            }
+            else if($('.ownerd__toggleBtn1>b').text()=='收起'){
+                $('.biaoge1').hide();
+                $('.ownerd__toggleBtn1>b').text("展开");
+            }
+        })
+        $('.tjzd').click(function(){
+            $('.tianjiaxiaoqu').show();
+        })
+        $('.fangshi>p').click(function(){
+            $('.tianjiaxiaoqu').hide();
+        });
+        $('.zd-close').click(function(){
+            $('.tianjiaxiaoqu').hide();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Sbt5slrZOkMZXcQtUZRy30A2WNAdgBG"></script>
+</head>
+<body style="position: relative;">
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1>添加新小区</h1>
+    </div>
+    <div class="personal_list tjxxq">
+        <ul>
+            <li><a href="#">小区<span class="rt"><input type="text" id="suggest" placeholder="输入小区"/></span></a></li>
+            <li><a href="#">详细地址<span class="rt" id="quyu" ></span></a></li>
+            <li><a href="#">区域<span class="rt" id="searchResultPanel"></span></a></li>
+            <li><a href="#">商圈<span class="rt sq"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+            <li><a href="#">地铁<span class="rt dt"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+            <li><a href="#">站名<span class="rt zm"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+        </ul>
+        <div id="xq-map"></div>
+    </div>
+    <div class="foot">
+        <script>
+            $('.foot').load('footer.html')
+        </script>
+        <div class="both"></div>
+    </div>
+    <div>
+        <div class="shangquan" style="display: none;">
+            <h1 class="hs">选择商圈</h1>
+            <ul>
+                <li>北大地</li>
+                <li>菜户营</li>
+                <li>草桥</li>
+                <li>长辛店</li>
+                <li>成寿寺</li>
+            </ul>
+            <a href="#" class="qx">取消</a>
+        </div>
+        <div class="ditie" style="display: none;">
+            <h1 class="hs">选择地铁</h1>
+            <ul>
+                <li>1号线</li>
+                <li>2号线</li>
+                <li>3号线</li>
+                <li>4号线</li>
+                <li>5号线</li>
+                <li>6号线</li>
+                <li>7号线</li>
+                <li>8号线</li>
+                <li>9号线</li>
+                <li>10号线</li>
+            </ul>
+            <a href="#" class="qx">取消</a>
+        </div>
+        <div class="zhanming" style="display: none;">
+            <h1 class="hs">选择站名</h1>
+            <ul>
+                <li>长春桥</li>
+                <li>公主坟</li>
+                <li>万寿路</li>
+                <li>慈寿寺</li>
+                <li>成寿寺</li>
+            </ul>
+            <a href="#" class="qx">取消</a>
+        </div>
+    </div>
+    <script>
+    var map = new BMap.Map("xq-map");
+    map.centerAndZoom("北京",14); // 初始化地图,设置城市和地图级别。
+    var acc = new BMap.Autocomplete(    //建立一个自动完成的对象
+            {"input" : "suggest"
+                ,"location" : map
+            });
+    var geoc = new BMap.Geocoder();
+    function G(id) {
+        return document.getElementById(id);
+    }
+    //添加导航控件
+    map.addControl(new BMap.NavigationControl());
+    //添加缩放控件
+    map.addControl(new BMap.ScaleControl());
+    //添加概览图
+    map.addControl(new BMap.OverviewMapControl());
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl());
+
+    acc.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+        var str = "";
+        var _value = e.fromitem.value;
+//            console.log(e.fromitem.value);
+        var value = "";
+        if (e.fromitem.index > -1) {
+            value = _value.province +  _value.city +  _value.district /*+  _value.street + _value.business*/;
+//                console.log(value);
+        }
+        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+        value = "";
+        if (e.toitem.index > -1) {
+            _value = e.toitem.value;
+            value = _value.province +  _value.city +  _value.district/* +  _value.street +  _value.business*/;
+        }
+        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+        G("searchResultPanel").innerHTML = str;
+    });
+
+    var myValue;
+    acc.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+        var _value = e.item.value;
+        myValue = _value.province +  _value.city +"-"+  _value.district /*+  _value.street +  _value.business*/;
+        myqy = _value.province +  _value.city +"-"+  _value.district +  _value.street +  _value.business;
+        myQuyu = _value.business;
+        setPlace();
+        G("searchResultPanel").innerHTML =myValue;
+        G('suggest').innerHTML = myQuyu;
+        G('quyu').innerHTML = myqy;
+        $('.xiaoqu').show();
+    });
+    function setPlace() {
+
+        function myFun() {
+            var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+            map.centerAndZoom(pp, 18);
+            map.addOverlay(new BMap.Marker(pp));    //添加标注
+            var pointt = new BMap.Point(local.getResults().getPoi(0).point.lng,local.getResults().getPoi(0).point.lat);
+            map.centerAndZoom(pointt,14);
+
+            var markerr = new BMap.Marker(pointt);// 创建标注
+            //默认动画
+//                markerr.setAnimation(BMAP_ANIMATION_BOUNCE);
+            //创建标注
+            map.addOverlay(markerr);         //将标注添加到地图中
+            map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+            var geocc = new BMap.Geocoder();
+            map.clearOverlays(new BMap.Marker(pp));    //清除地图上所有覆盖物
+            map.addOverlay(markerr); // 将标注添加到地图中
+            markerr.enableDragging(); //设置可拖拽
+            markerr.addEventListener("dragend", function(e) { //拖动事件
+                var pt = e.point;
+                var dizhi;
+                geoc.getLocation(pt, function (rs) {
+                    var addComp = rs.addressComponents;
+                    dizhi = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//                    document.getElementById('suggestId').value = dizhi;//更新地址数据
+                    var content = dizhi + "<br/><br/>经度：" + e.point.lng + "<br/>纬度：" + e.point.lat;
+                    var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+                    markerr.openInfoWindow(infoWindow, map.getCenter());//将经纬度信息显示在提示框内
+                });
+//                document.getElementById("zuobiao").value = e.point.lng + ", " + e.point.lat;//打印拖动结束坐标。
+            })
+        }
+        var local = new BMap.LocalSearch(map, { //智能搜索
+            onSearchComplete: myFun
+        });
+        local.search(myValue);
+    }
+
+</script>
+    <script>
+        $('.sq').click(function () {
+            $('.shangquan').show();
+            $('.ditie').hide();
+            $('.zhanming').hide();
+        });
+        $('.dt').click(function () {
+            $('.ditie').show();
+            $('.shangquan').hide();
+            $('.zhanming').hide();
+        });
+        $('.zm').click(function () {
+            $('.zhanming').show();
+            $('.shangquan').hide();
+            $('.ditie').hide();
+        });
+        $('.qx').click(function () {
+            $('.shangquan').hide();
+            $('.ditie').hide();
+            $('.zhanming').hide();
+        })
+        $('.shangquan ul li').click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+            var txt = $(this).text();
+            $('.sq em').text(txt);
+            $('.sq em').removeClass('hs');
+        })
+        $('.ditie ul li').click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+            var txt = $(this).text();
+            $('.dt em').text(txt);
+            $('.dt em').removeClass('hs');
+        })
+        $('.zhanming ul li').click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+            var txt = $(this).text();
+            $('.zm em').text(txt);
+            $('.zm em').removeClass('hs');
+        })
+    </script>
+</body>
+</html>

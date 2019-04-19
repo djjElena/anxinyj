@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>账单列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_50mypsq6og.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>我的合同&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>业绩详情 </h1>
+            </div>
+            <div class="main-content">
+                <div class="brand">
+                    <a href="#"><span>合同信息</span></a>
+                    <a href="#" class="active"><span>业绩详情</span> </a>
+                    <button class="layui-btn rt ye">业绩申请</button>
+                </div>
+                <div class="money_title money_titles">
+                    <p>总应收业绩：<span>9500.00</span>元      总实收业绩：<span>5000.00</span>元</p>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th> 参与员工</th>
+                        <th>录入时间</th>
+                        <th>录入次数</th>
+                        <th> 本次实收业绩</th>
+                        <th>分配员工</th>
+                        <th> 一级审核</th>
+                        <th> 二级审核</th>
+                        <th> 管理员审核</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>2019-01-11</td>
+                        <td>第一次</td>
+                        <td>2,500.00</td>
+                        <td>12345678910</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td>备注</td>
+                        <td>
+                            <button class="layui-btn">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>2019-01-11</td>
+                        <td>第一次</td>
+                        <td>2,500.00</td>
+                        <td>12345678910</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td>备注</td>
+                        <td>
+                            <button class="layui-btn">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>2019-01-11</td>
+                        <td>第一次</td>
+                        <td>2,500.00</td>
+                        <td>12345678910</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td>备注</td>
+                        <td>
+                            <button class="layui-btn">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>2019-01-11</td>
+                        <td>第一次</td>
+                        <td>2,500.00</td>
+                        <td>12345678910</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td> 待审核</td>
+                        <td>备注</td>
+                        <td>
+                            <button class="layui-btn">查看合同</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="mypage  ph_dis">
+                        <a href="#">上一页</a>
+                        <a href="#" class="linking">1</a>
+                        <a href="#" class="unlink">2</a>
+                        <a href="#" class="unlink">3</a>
+                        <a href="#" class="unlink">4</a>
+                        <a href="#">下一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 业绩申请弹出框-->
+    <div class="flex yes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn ye_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩分配人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应收业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入合同号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item role-item">
+                        <label class="layui-form-label">参与员工：</label>
+                        <div class="layui-input-block ji-jia">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">李四</option>
+                                <option value="2">王五</option>
+                                <option value="3">赵六</option>
+                            </select>
+                            <input type="text" placeholder="请输入实收业绩" class="layui-input">
+                            <div class="jia"><i class="iconfont icon-jiahao1"></i></div>
+                            <div class="jian"><i class="iconfont icon-jianhao"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        $(".ye").click(function(){
+            $(".yes").show();
+        })
+        $(".ye_close").click(function(){
+            $(".yes").hide();
+        })
+        /*增加删除服务区域*/
+        $('.jia').click(function(event) {
+            var myDom = $(this).parent('.ji-jia').clone(true);
+            myDom.find('input').val('');
+            $(this).parent('.ji-jia').after(myDom);
+        });
+        $('.jian').click(function(event) {
+            var className = $(this).parent('.ji-jia').attr('class').split(' ')[1];
+            if($('.' + className).length <= 1){
+                return ;
+            }
+            $(this).parent('.ji-jia').remove();
+        });
+    </script>
+</body>
+</html>

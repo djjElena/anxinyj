@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/mobileSelect.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/mobileSelect.js"></script>
+</head>
+<body>
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1>添加房源</h1>
+    </div>
+    <div class="fwxq-middle xzylxq tjfy">
+        <h1>合景领峰(第5套)</h1>
+        <ul class="data">
+            <li><a href="#" class="clearfloat">出租类型<span class="rt czlx"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+            <li><a href="#" class="clearfloat">楼号<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">单元号<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">房间号<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">户型<span class="rt hx"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+            <li><a href="#" class="clearfloat">建筑面积<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">总楼层数<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">所在楼层<span class="rt"><input type="text" placeholder="请输入"/></span></a></li>
+            <li><a href="#" class="clearfloat">电梯房<span class="rt dtf"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+            <li><a href="#" class="clearfloat">出租状态<span class="rt zt"><em class="hs">请选择</em><i class="iconfont icon-jiantou2"></i></span></a></li>
+        </ul>
+    </div>
+    <div class="foot">
+        <div class="nextstep">
+            <a href="#">下一步</a>
+        </div>
+        <div class="both"></div>
+    </div>
+    <script type="text/javascript">
+        var chuzutype=['地址','房源','房源+地址'];
+        var chuzuzhuangtai=['未租','已租'];
+        var numArr1=['1室','2室','3室'];
+        var numArr2=['0厅','1厅'];
+        var numArr3=['0卫','1卫'];
+        var sfdtf=['是','否'];
+
+        var mobileSelect1 = new MobileSelect({
+            trigger: '.czlx',
+            title: '出租类型选择',
+            wheels: [
+                {data: chuzutype}
+            ],
+            position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+            transitionEnd:function(indexArr, data){
+                console.log(data);
+            },
+            callback:function(indexArr, data){
+                console.log(data);
+            }
+        });
+
+        var mobileSelect2 = new MobileSelect({
+            trigger: '.hx',
+            title: '户型选择',
+            wheels: [
+                {data: numArr1},
+                {data: numArr2},
+                {data: numArr3}
+            ],
+            position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+            transitionEnd:function(indexArr, data){
+                console.log(data);
+            },
+            callback:function(indexArr, data){
+                console.log(data);
+            }
+        });
+
+        var mobileSelect3 = new MobileSelect({
+            trigger: '.dtf',
+            title: '是否电梯房',
+            wheels: [
+                {data: sfdtf}
+            ],
+            position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+            transitionEnd:function(indexArr, data){
+                console.log(data);
+            },
+            callback:function(indexArr, data){
+                console.log(data);
+            }
+        });
+
+        var mobileSelect4 = new MobileSelect({
+            trigger: '.zt',
+            title: '出租状态选择',
+            wheels: [
+                {data: chuzuzhuangtai}
+            ],
+            position:[0],
+            transitionEnd:function(indexArr, data){
+                console.log(data);
+            },
+            callback:function(indexArr, data){
+                console.log(data);
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_cgvrg226174.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/mobileSelect.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/laydate/laydate.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/mobileSelect.js"></script>
+</head>
+<body>
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1>合同筛选</h1>
+    </div>
+    <div class="fwxq-middle xzylxq tjfyptxx">
+        <div class="hetongshaixuan">
+            <div>
+                <h1>租约状态</h1>
+                <ul>
+                    <li>
+                        <span>全部</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>签约成功</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>待租客确认</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>租约快到期</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>租约已到期</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>需退房处理</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                </ul>
+                <h1>合同类型</h1>
+                <ul>
+                    <li>
+                        <span>品牌公寓合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>民宿合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>企业咨询合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>新房合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>二手房合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                    <li>
+                        <span>业主合同</span>
+                        <i><img src="image/xz.png" alt=""/></i>
+                    </li>
+                </ul>
+                <h1>条件搜索</h1>
+                <input type="text"/> <span>输入房源地址/租客姓名/合同号等信息</span>
+            </div>
+            <div class="ways">
+                <a class="chongzhi">重置</a>
+                <a>确定</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.hetongshaixuan div ul li').click(function () {
+            $(this).toggleClass('active');
+        })
+        $('.chongzhi').click(function () {
+            $('.hetongshaixuan div ul li').removeClass('active');
+            $('.hetongshaixuan div input').val('')
+        })
+    </script>
+</body>
+</html>

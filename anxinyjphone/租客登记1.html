@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/mobileSelect.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/laydate/laydate.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/mobileSelect.js"></script>
+</head>
+<body>
+<div class="tou">
+    <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+    <h1>租客登记</h1>
+</div>
+<div class="fwxq-middle xzylxq tjfyptxx">
+    <ul class="data">
+        <li><a href="#" class="clearfloat">房源地址<span class="fk"><input type="text" value="合景领峰-1号楼1单元301" style="width:100%"/></span></a></li>
+    </ul>
+    <h1>房源类型</h1>
+    <ul class="data">
+        <li><a href="#" class="clearfloat"><span><input type="radio" name="ht"/></span>房源</a></li>
+        <li><a href="#" class="clearfloat"><span><input type="radio" name="ht"/></span>地址</a></li>
+    </ul>
+    <h1>合同类型</h1>
+    <ul class="data">
+        <li><a href="#" class="clearfloat"><span><input type="radio" name="ff"/></span>新签电子合同</a></li>
+        <li><a href="#" class="clearfloat"><span><input type="radio" name="ff"/></span>已签纸质合同</a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">手机号<span><input type="text" value=""/></span></a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">承租人姓名<span><input type="text" value=""/></span></a></li>
+        <li><a href="#" class="clearfloat">证件类型<span><input type="text" value=""/></span></a></li>
+        <li><a href="#" class="clearfloat">证件号码<span><input type="text" value=""/></span></a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">租期起始<span class=""><input type="text" value="" placeholder="请选择" id="start"/></span><i class="iconfont icon-jiantou2 rt"></i></a></li>
+        <li><a href="#" class="clearfloat">租期终止<span class=""><input type="text" value="" placeholder="请选择" id="end"/></span><i class="iconfont icon-jiantou2 rt"></i></a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">付款方式<span class="fk"><em class="fkfs huise">请选择</em><i class="iconfont icon-jiantou2 rt"></i></span></a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">房屋租金<span><input type="text" value="3800.00"/></span></a></li>
+        <li><a href="#" class="clearfloat">房屋押金<span><input type="text" value="3800.00"/></span></a></li>
+    </ul>
+    <ul class="data">
+        <li class="ss"><a href="#" class="clearfloat">增加费用<span class="fk"><em class=" huise"></em><i class=" zjfy addtj">+添加费用</i></span></a></li>
+        <!--<li class="feiyong" style="display: none;"><a href="#" class="clearfloat otherfy">服务费<span><input type="text" value="3800.00"/> <i class="iconfont icon-guanbi rt gb"></i></span></a></li>-->
+
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">收租日期<span class="fk"><em class="szrq huise">请选择</em><i class="iconfont icon-jiantou2 rt"></i></span></a></li>
+    </ul>
+    <ul class="data">
+        <li><a href="#" class="clearfloat">更多<span class="huise cc">请添加附加条款，家居清单等</span><i class="iconfont icon-jiantou2 rt"></i></a></li>
+    </ul>
+</div>
+<div class="foot">
+    <div class="nextstep">
+        <a href="#">下一步</a>
+    </div>
+    <div class="both"></div>
+</div>
+<script>
+    laydate.render({
+        elem:"#start"
+    })
+    laydate.render({
+        elem:"#end"
+    })
+</script>
+<script type="text/javascript">
+    var chuzutype=['月付','季付'];
+    var shouzuriqi1=['每期提前','每期固定'];
+    var shouzuriqi2=['0','1','2','3','4','5','6','7'];
+    var zjfy1=['其他押金','周期费用'];
+    var zjfy2=['门卡押金','钥匙押金'];
+
+    var mobileSelect1 = new MobileSelect({
+        trigger: '.fkfs',
+        title: '付款方式选择',
+        wheels: [
+            {data: chuzutype}
+        ],
+        position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+        transitionEnd:function(indexArr, data){
+            console.log(data);
+        },
+        callback:function(indexArr, data){
+            console.log(data);
+        }
+    });
+
+    var mobileSelect2 = new MobileSelect({
+        trigger: '.szrq',
+        title: '收租日期选择',
+        wheels: [
+            {data: shouzuriqi1},
+            {data: shouzuriqi2}
+        ],
+        position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+        transitionEnd:function(indexArr, data){
+            console.log(data);
+        },
+        callback:function(indexArr, data){
+            console.log(data);
+        }
+    });
+    var mobileSelect3 = new MobileSelect({
+        trigger: '.zjfy',
+        title: '增加费用选择',
+        wheels: [
+            {data: zjfy1},
+            {data: zjfy2}
+        ],
+        position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+        transitionEnd:function(indexArr, data){
+            console.log(data[1]);
+        },
+        callback:function(indexArr, data){
+//            console.log(data[1]);
+           $(`.otherfy${index} em`).text(data[1]);
+            $('.zjfy').text('+增加费用')
+        }
+    });
+    function render(index){
+        var dom = document.createElement('li')
+        dom.setAttribute('class','feiyong'+index);
+        dom.setAttribute('class','gg');
+        var html='';
+        html+=`<a class="clearfloat otherfy${index}">
+                <em></em>  
+                <span style="width:70%;">
+                    <input type="text" value=""/>
+                    <i class="iconfont icon-guanbi rt" id="gb"></i>
+                </span>
+               </a>`;
+        dom.innerHTML = html;
+        $('.ss').append(dom);
+        $(`.feiyong${index}`).show();
+    }
+    var index = 0;
+    $('.zjfy').click(function () {
+        index++;
+        render(index);
+      })
+    $(document).on('click','#gb',function () {
+        $(this).parent().parent().parent().hide();
+   })  
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>添加房源</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/laydate/laydate.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nxW0akynjKF8Ag0G0uVVwq0t6ak1Q1Zj"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>房源系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>添加房源</h1>
+            </div>
+            <div class="tjfy">
+                <h1>添加房源</h1>
+                <div>
+                    <div class="mphxxx">
+                        <h2>门牌户型信息</h2>
+                        <div class="xiangqing">
+                            <ul>
+                                <li>
+                                    <label><em class="org">*</em>出租类型：</label> <span><input type="radio"/>房源出租</span> &nbsp; &nbsp; &nbsp;<span><input type="radio"/>地址出租</span> &nbsp; &nbsp; &nbsp;<span><input type="radio"/>房源+地址出租</span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>小区名称：</label>
+                                    <span>
+                                        <select name="">
+                                            <option value="" selected>请输入小区名</option>
+                                            <option value="">小区1</option>
+                                            <option value="">小区1</option>
+                                            <option value="">小区1</option>
+                                        </select>
+                                        <a class="xiaoqu">添加新小区</a>
+                                    </span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>楼号：</label>
+                                    <span><input type="text" placeholder="请输入楼号"/></span>
+
+                                    <label><em class="org">*</em>单元号：</label>
+                                    <span><input type="text" placeholder="请输入单元号"/></span>
+
+                                    <label><em class="org">*</em>房间号：</label>
+                                    <span><input type="text" placeholder="请输入房间号"/></span>
+                                </li>
+                                <li class="xq huxing">
+                                    <label><em class="org">*</em>户型：</label>
+                                    <span><input type="text" placeholder="请输入几室"/></span>
+                                    <span><input type="text" placeholder="请输入几厅"/></span>
+                                    <span><input type="text" placeholder="请输入几卫"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>建筑面积：</label>
+                                    <span><input type="text" placeholder="请输入面积"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>总楼层数：</label>
+                                    <span><input type="text" placeholder="请输入楼层"/></span>
+
+                                    <label><em class="org">*</em>所在层数：</label>
+                                    <span><input type="text" placeholder="请输入楼层"/></span>
+                                </li>
+                                <li>
+                                    <label><em class="org">*</em>电梯房：</label>
+                                    <span><input type="radio"/>是</span> &nbsp; &nbsp; &nbsp;<span><input type="radio"/>否</span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>出租状态：</label>
+                                    <span>
+                                        <select name="">
+                                            <option value="" selected>请选择</option>
+                                            <option value="">状态1</option>
+                                            <option value="">状态2</option>
+                                            <option value="">状态3</option>
+                                        </select>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mphxxx">
+                        <h2>房源配套信息</h2>
+                        <div class="xiangqing">
+                            <ul>
+                                <li>
+                                    <label><em class="org">*</em>出租方式：</label> <span><input type="checkbox"/>短租</span> &nbsp; &nbsp; &nbsp;<span><input type="checkbox"/>长租</span> &nbsp; &nbsp; &nbsp;<span><input type="checkbox"/>月租</span>
+                                </li>
+                                <li>
+                                    <label><em class="org">*</em>房屋标签：</label>
+                                    <span><input type="checkbox"/>随时看房</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>新上</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>免中介费</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>集中供暖</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>精装</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>靠近地铁</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>首次出租</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>独卫</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>独立阳台</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>在线签约</span> &nbsp; &nbsp; &nbsp;
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>付款方式：</label>
+                                    <label class="zhifu"><em class="org">*</em>月付：</label>
+                                    <span><input type="text" placeholder="请输入价格/月"/></span>
+
+                                    <label class="zhifu"><em class="org">*</em>季付：</label>
+                                    <span><input type="text" placeholder="请输入价格/月"/></span>
+
+                                    <label class="zhifu"><em class="org">*</em>半年付：</label>
+                                    <span><input type="text" placeholder="请输入价格/月"/></span>
+
+                                    <label class="zhifu"><em class="org">*</em>年付：</label>
+                                    <span><input type="text" placeholder="请输入价格/月"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>页面标价：</label>
+                                    <span><input type="text" placeholder="请输入价格/月"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>房屋押金：</label>
+                                    <span><input type="text" placeholder="请输入价格"/></span>
+                                </li>
+                                <li class="xq huxing">
+                                    <label><em class="org">*</em>可入住时间：</label>
+                                    <span><input type="text" placeholder="请选择日期" class="jianpan"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>房间照片：</label>
+                                    <span>
+                                        <img src="images/sc1.png" alt=""/>
+                                        <img src="images/sc2.png" alt=""/> <br/>
+                                        <em>第一张图作为封面图，其余几张为展示的轮播图（封面图尺寸为xxx*xxx像素，轮播图为xxx*xxx像素）</em>
+                                    </span>
+                                </li>
+                                <li class="xq miaoshu">
+                                    <label><em class="org">*</em>房源描述：</label>
+                                    <span><textarea name="" id="" cols="30" rows="10"></textarea></span>
+                                </li>
+                                <li class="xq miaoshu">
+                                    <label><em class="org">*</em>房间配置：</label>
+                                    <span>
+                                        <ul>
+                                            <li><i class="iconfont icon-xiyiji"></i> <br/>洗衣机</li>
+                                            <li class="active"><i class="iconfont icon-yigui"></i> <br/>衣柜</li>
+                                            <li><i class="iconfont icon-dianshi"></i> <br/>电视</li>
+                                            <li><i class="iconfont icon-kongtiao-"></i> <br/>空调</li>
+                                            <li><i class="iconfont icon-haofangtuo400iconfont2reshuiqi"></i> <br/>热水器</li>
+                                            <li class="active"><i class="iconfont icon-nuanqi-"></i> <br/>暖气</li>
+                                            <li class="active"><i class="iconfont icon-chuang"></i> <br/>床</li>
+                                            <li class="active"><i class="iconfont icon-WIFI"></i> <br/>网络</li>
+                                        </ul>
+                                    </span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mphxxx">
+                        <h2>地址配套信息</h2>
+                        <div class="xiangqing">
+                            <ul>
+                                <li>
+                                    <label><em class="org">*</em>地址标签：</label>
+                                    <span><input type="checkbox"/>随时看房</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>新上</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>免中介费</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>集中供暖</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>精装</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>靠近地铁</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>首次出租</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>独卫</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>独立阳台</span> &nbsp; &nbsp; &nbsp;
+                                    <span><input type="checkbox"/>在线签约</span> &nbsp; &nbsp; &nbsp;
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>页面标价：</label>
+                                    <span><input type="text" placeholder="请输入价格/年"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>地址押金：</label>
+                                    <span><input type="text" placeholder="请输入价格"/></span>
+                                </li>
+                                <li class="xq">
+                                    <label><em class="org">*</em>房间照片：</label>
+                                    <span>
+                                        <img src="images/sc1.png" alt=""/>
+                                        <img src="images/sc2.png" alt=""/> <br/>
+                                        <em>第一张图作为封面图，其余几张为展示的轮播图（封面图尺寸为xxx*xxx像素，轮播图为xxx*xxx像素）</em>
+                                    </span>
+                                </li>
+                                <li class="xq miaoshu">
+                                    <label><em class="org">*</em>地址描述：</label>
+                                    <span><textarea name=""  cols="30" rows="10"></textarea></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tijiao">提交 </div>
+            </div>
+        </div>
+    </div>
+    <div class="tianjiaxiaoqu">
+        <div class="tianjia">
+            <h1>添加新小区</h1>
+            <ul>
+                <li>
+                    <label><em class="org">*</em>小区名：</label>
+                    <span><input type="text" placeholder="请输入小区名"/></span> <br/>
+                </li>
+                <li>
+                    <label>定位：</label>
+                    <span><input type="text"/></span>
+                    <a>搜索定位</a>
+                </li>
+            </ul>
+            <div id="map"></div>
+            <ul>
+                <li>
+                    <label><em class="org">*</em>小区地址：</label>
+                    <span><input type="text"/></span> <br/>
+                </li>
+                <li>
+                    <label>区域：</label>
+                    <span>
+                        <select name="">
+                            <option value="">区域1</option>
+                            <option value="">区域2</option>
+                            <option value="">区域3</option>
+                        </select>
+                    </span>
+
+                    <label>商圈：</label>
+                    <span>
+                        <select name="">
+                            <option value="">商圈1</option>
+                            <option value="">商圈2</option>
+                            <option value="">商圈3</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <label>地铁：</label>
+                    <span>
+                        <select name="">
+                            <option value="">地铁1</option>
+                            <option value="">地铁1</option>
+                            <option value="">地铁1</option>
+                        </select>
+                    </span>
+
+                    <label>站名：</label>
+                    <span>
+                        <select name="">
+                            <option value="">站名1</option>
+                            <option value="">站名1</option>
+                            <option value="">站名1</option>
+                        </select>
+                    </span>
+                </li>
+            </ul>
+            <div class="fangshi rt">
+                <p>取消</p>
+                <p>确定</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        laydate.render({
+            elem: '.jianpan'
+        });
+    </script>
+    <script>
+        /*百度地图*/
+        $(function(){
+            var map = new BMap.Map("map");
+            var point = new BMap.Point(116.295057,39.966992);
+            map.centerAndZoom(point, 18);                 // 初始化地图，设置中心点坐标和地图级别
+            //添加导航控件
+            map.addControl(new BMap.NavigationControl());
+            //添加缩放控件
+            map.addControl(new BMap.ScaleControl());
+            //添加概览图
+            map.addControl(new BMap.OverviewMapControl());
+            //添加地图类型控件
+            map.addControl(new BMap.MapTypeControl());
+            var marker = new BMap.Marker(point);
+            //默认动画
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            //创建标注
+            map.addOverlay(marker);         //将标注添加到地图中
+            map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+            //信息提示的窗口
+            var opts = {
+                width : 100,     // 信息窗口宽度
+                height: 40,     // 信息窗口高度
+//                title : "北京润途影视传媒有限公司" , // 信息窗口标题
+                enableMessage:true//设置允许信息窗发送短息
+            };
+            var infoWindow = new BMap.InfoWindow("地址：北京市金源时代商务中心", opts);  // 创建信息窗口对象
+            map.openInfoWindow(infoWindow,point); //开启信息窗口
+            marker.addEventListener("click", function(){
+                map.openInfoWindow(infoWindow,point); //开启信息窗口
+            });
+        })
+    </script>
+    <script>
+        $('.xiaoqu').click(function(){
+           $('.tianjiaxiaoqu').show();
+        });
+        $('.fangshi>p').click(function(){
+            $('.tianjiaxiaoqu').hide();
+        });
+    </script>
+</body>
+</html>

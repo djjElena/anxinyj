@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <!--<title>业绩申请</title>-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_g11oa01kc3.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+<!-- 头部-->
+<div class="daohang">
+    <script>$(".daohang").load("header.html");</script>
+</div>
+<!-- 中间内容-->
+<div class="main-md">
+    <!-- 左边-->
+    <div class="left-content">
+        <script>$(".left-content").load("left.html");</script>
+    </div>
+    <!-- 右边-->
+    <div class="right-content">
+        <div class="title">
+            <h1>房源系统 &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>租客登记</h1>
+        </div>
+        <div class="tjfy">
+            <h1>租客登记</h1>
+            <div>
+                <div class="mphxxx">
+                    <h2>门牌户型信息</h2>
+                    <div class=" yzmsg xiangqing">
+                        <div class="main-content">
+                            <form class="layui-form" action="">
+                                <div class="layui-row">
+                                    <div class="layui-col-xs12" style="display: flex;">
+                                        <div class="layui-form-item layui-col-xs4">
+                                            <label class="layui-form-label" style="width:120px;"><em class="org">*</em>房源地址：</label>
+                                            <div class="layui-input-inline">
+                                                <input style="min-width: 400px" type="text" class="layui-input" placeholder="请输入小区/公寓">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-col-xs6">
+                                            <label class="layui-form-label" style="width:120px;"><em class="org">*</em>出租类型：</label>
+                                            <div class="layui-input-block">
+                                                <input type="radio" name="ye" value="承租房源" title="承租房源">
+                                                <input type="radio" name="ye" value="承租地址" title="承租地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mphxxx">
+                    <h2>合同类型</h2>
+                    <div class="yzmsg xiangqing htlx">
+                        <div class="active">
+                            <h1>新签电子合同</h1>
+                            <p>适用于空房新租客签约场景，适用CA电子合同，实名认证租客身份，公证机构办法云证书，具备法律效力，同时管理方便。</p>
+                            <b class="xz">
+                                <img src="images/xz.png" alt=""/>
+                            </b>
+                        </div>
+                        <div>
+                            <h1>已签纸质合同</h1>
+                            <p>适用于空房新租客签约场景，适用CA电子合同，实名认证租客身份，公证机构办法云证书，具备法律效力，同时管理方便。</p>
+                            <!--<b class="xz">-->
+                                <!--<img src="images/xz.png" alt=""/>-->
+                            <!--</b>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="mphxxx">
+                    <h2>承租人姓名</h2>
+                    <div class=" yzmsg xiangqing">
+                        <div class="main-content">
+                            <form class="layui-form" action="">
+                                <div class="layui-row">
+                                    <div class="layui-col-xs12" style="display: flex;">
+                                        <div class="layui-form-item layui-col-xs12">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>承租人姓名：</label>
+                                            <div class="layui-input-inline">
+                                                <input style="width: 220px" type="text" class="layui-input" placeholder="承租人姓名">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-col-xs12">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>承租人手机：</label>
+                                            <div class="layui-input-inline">
+                                                <input style="width: 220px" type="text" class="layui-input" placeholder="承租人手机">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-xs12">
+                                        <label class="layui-form-label" style="width:150px;"><em class="org">*</em>出租类型：</label>
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="ye" value="男" title="男">
+                                            <input type="radio" name="ye" value="女" title="女">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-xs12">
+                                        <label class="layui-form-label" style="width:150px;"><em class="org">*</em>证件类型：</label>
+                                        <div class="layui-input-block">
+                                            <div class="layui-input-block" style="margin-left:0;">
+                                                <select>
+                                                    <option value=""></option>
+                                                    <option value="0">护照</option>
+                                                    <option value="1">二代身份证</option>
+                                                </select>
+                                                <input style="display:inline-block;width: 400px" type="text" class="layui-input" placeholder="请输入证件号码">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mphxxx">
+                    <h2>租约信息</h2>
+                    <div class=" yzmsg xiangqing">
+                        <div class="main-content">
+                            <form class="layui-form" action="">
+                                <div class="layui-row">
+                                    <div class="layui-col-xs12" style="display: flex;">
+                                        <div class="layui-form-item layui-col-xs3">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>租约起止：</label>
+                                            <div class="layui-input-inline">
+                                                <input id='zyqz' style="width: 220px" type="text" class="layui-input" placeholder="起始日期-结束日期">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-col-xs3">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>付款方式：</label>
+                                            <div class="layui-input-block">
+                                                <div class="layui-input-block" style="margin-left:0;">
+                                                    <select>
+                                                        <option value=""></option>
+                                                        <option value="0">付一</option>
+                                                        <option value="1">付二</option>
+                                                        <option value="1">付三</option>
+                                                    </select>
+                                                    <!--<input style="display:inline-block;width: 400px" type="text" class="layui-input" placeholder="请输入证件号码">-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-col-xs12" style="display: flex;">
+                                        <div class="layui-form-item layui-col-xs3">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>房屋租金：</label>
+                                            <div class="layui-input-inline">
+                                                <input style="width: 220px" type="text" class="layui-input" placeholder="请输入金额(元/月)">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item layui-col-xs3">
+                                            <label class="layui-form-label" style="width:150px;"><em class="org">*</em>房屋租金：</label>
+                                            <div class="layui-input-inline">
+                                                <input style="width: 220px" type="text" class="layui-input" placeholder="请输入金额(元)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-xs12">
+                                        <label class="layui-form-label" style="width:150px;">其他费用：</label>
+                                        <div class="layui-input-block" style="margin-left:0;">
+                                            <div class="layui-input-block"  id="feiyong">
+                                                <select>
+                                                    <option value=""></option>
+                                                    <option value="0">其他</option>
+                                                    <option value="1">其他</option>
+                                                </select>
+                                                <input style="display:inline-block;width: 200px" type="text" class="layui-input" placeholder="请输入金额(元/月)">
+                                                <input style="display:inline-block;width: 200px" type="text" class="layui-input" placeholder="请输入账单备注">
+                                                <div class="jian"><i class="iconfont icon-jianhao"></i></div>
+                                            </div>
+                                            <div class="zengjia">增加其他费用</div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-xs12">
+                                        <label class="layui-form-label" style="width:150px;"><em class="org">*</em>收租日期：</label>
+                                        <div style="padding-left: 40px;font-size: 14px;">
+                                            <div class="layui-input-block">
+                                                <input type="radio" name="ye" value="提前" title="提前" class="szrq">
+                                                <input style="width: 220px;margin-bottom:10px;display:inline-block;" type="text" class="layui-input" placeholder="请输入金额(元)"> 元收租
+                                            </div>
+                                            <div class="layui-input-block">
+                                                <input type="radio" name="ye" value="固定" title="固定" class="szrq">
+                                                <input style="width: 220px;margin-bottom:10px;display:inline-block;" type="text" class="layui-input" placeholder="请输入金额(元)"> 号收租(每期第一个月)
+                                            </div>
+                                            <div class="layui-input-block">
+                                                <input type="radio" name="ye" value="固定" title="固定" class="szrq">
+                                                <input style="width: 220px;margin-bottom:10px;display:inline-block;" type="text" class="layui-input" placeholder="请输入金额(元)"> 号收租(每期提前第一个月)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-xs12">
+                                        <label class="layui-form-label" style="width:150px;">账单计划：</label>
+                                        <table class="layui-table" style="width:70%;">
+                                            <thead>
+                                            <tr>
+                                                <th>期数</th>
+                                                <th>账期</th>
+                                                <th>账单</th>
+                                                <th>最晚支付日 </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1-1</td>
+                                                <td>2017-12-14至2019-12-14</td>
+                                                <td>房屋租金：3,800.00元 <br/> 房屋押金：500.00元</td>
+                                                <td> 2019-01-08</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1-2</td>
+                                                <td>2017-12-14至2019-12-14</td>
+                                                <td>房屋租金：3,800.00元 <br/> 房屋押金：500.00元</td>
+                                                <td> 2019-01-08</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="yezhuxinxi zqxx  qita zuke">
+                                        <ul>
+                                            <li><span>家居家电清单</span></li>
+                                            <li>
+                                                <span>
+                                                    业主家具家电：
+                                                    <label for="">
+                                                        <span class="jjqd">
+                                                            <em>单人床</em>
+                                                            <em>1</em>
+                                                        </span>
+                                                    </label>
+                                                    公司配置清单：
+                                                    <label for="" style="display: block;" class="zz">
+                                                        <span class="jjqd">
+                                                            <em>桌子</em>
+                                                            <em>1</em>
+                                                        </span>
+                                                    </label>
+                                                    <div class="add">添加</div>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span style="vertical-align: top;">附加条款</span>
+                                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tijiao">提交</div>
+            </div>
+        </div>
+    </div>
+    <!-- 公司配置清单-->
+    <div class="flex">
+        <div class="gspzqd">
+            <h1>公司配置清单</h1>
+            <span>例如：床、沙发、电视机等</span>
+            <h2>
+                <input type="text" placeholder="输入名称" class="chengben" autocomplete="off"/>
+                <p>
+                    <i class="shao lt">-</i><span>0</span><i class="duo rt">+</i>
+                </p>
+                <span class="shanchu">删除</span>
+            </h2>
+            <div class="addagain">+再添加一个</div>
+            <div class="fangshi rt">
+                <p>取消</p>
+                <p>确定</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/layui/layui.all.js"></script>
+<script>
+    !function(){
+        var form = layui.form
+                ,layer = layui.layer;
+    }();
+    layui.use('table', function(){
+        var table = layui.table;
+    });
+    $(".ye").click(function(){
+        $(".yes").show();
+    })
+    $(".ye_close").click(function(){
+        $(".yes").hide();
+    })
+    $(".he").click(function(){
+        $(".hes").show();
+    })
+    $(".hes_close").click(function(){
+        $(".hes").hide();
+    })
+//    $('.htlx>div>b').hide();
+//    $('.htlx>div').click(function(){
+//        $(this).addClass('active');
+//        $(this).siblings().removeClass('active');
+////        ($(this).siblings()>'.xz').hide();
+////        ($(this)>'.xz').show();
+//        $(this).children(2).show();
+//        $(this).siblings().children('.xz').hide();
+//    })
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#zyqz'
+            ,range: true
+        });
+
+    })
+    $('.zengjia').click(function(){
+        var ss = $('#feiyong').clone(true);
+        $('#feiyong').after(ss);
+//        console.log(123);
+    })
+    $('.jian').click(function(){
+        $(this).parent('#feiyong').hide();
+    })
+    $('.add').click(function(){
+//        var zz = $('.zz>span:first-child').clone(true);
+//        $('.zz>span:first-child').after(zz);
+//        console.log(zz);
+        $('.flex').show();
+    })
+    $('.addagain').click(function(){
+        var zz = $('.gspzqd>h2').clone(true);
+        $('.gspzqd>h2').after(zz);
+//        console.log(zz);
+    })
+    $('.shanchu').click(function(){
+        $(this).parent().hide();
+    })
+    $('.fangshi>p').click(function(){
+        $('.flex').hide();
+    })
+
+    $('.duo').click(function(){
+        if(($(this).parent().children()[1].innerHTML)<10){
+            ($(this).parent().children()[1].innerHTML)++;
+        }
+    })
+    $('.shao').click(function(){
+        if(($(this).next()[0].innerHTML)>=1){
+            ($(this).next()[0].innerHTML)--
+        }
+        else{
+            ($(this).next()[0].innerHTML)=0;
+        }
+    })
+    $('.fangshi>p:nth-child(2)').click(function(){
+        var name = $('.gspzqd>h2>input').val();
+        var value = $('.gspzqd>h2>p>span').text();
+//        console.log($('.gspzqd>h2>input').val());
+//        console.log($('.gspzqd>h2>p>span').text())
+        $('.zz').append("<span class='jjqd'><em>"+name+"</em><em>"+value+"</em></span>")
+    })
+
+</script>
+</body>
+</html>

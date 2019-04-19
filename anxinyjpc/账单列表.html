@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>账单列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>账单列表   &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a> 账单列表</h1>
+            </div>
+            <div class="main-content">
+                <div class="brand">
+                    <a href="#" class="active"> <span>租客账单</span> </a>
+                    <a href="#"> <span>业主账单</span> </a>
+                </div>
+                <form class="layui-form" action="">
+                    <div class="layui-row lay_zhang">
+                        <div class="layui-col-xs9">
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">应付款日：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input" id="test6" placeholder=" 开始日期--结束日期 " lay-key="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">账单类型：</label>
+                                <div class="layui-input-block">
+                                    <div class="layui-input-block">
+                                        <select>
+                                            <option value=""></option>
+                                            <option value="0">账单类型1</option>
+                                            <option value="1">账单类型2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">账单项目：</label>
+                                <div class="layui-input-block">
+                                    <div class="layui-input-block">
+                                        <select>
+                                            <option value=""></option>
+                                            <option value="0">账单项目1</option>
+                                            <option value="1">账单项目2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">账单状态：</label>
+                                <div class="layui-input-block">
+                                    <div class="layui-input-block">
+                                        <select>
+                                            <option value=""></option>
+                                            <option value="0">账单状态1</option>
+                                            <option value="1">账单状态2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">房源地址：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn">查询</button>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs3 shose">
+                            <div class="layui-form-item">
+                                <div class="layui-input-inline">
+                                    <input type="text" placeholder="业主名/电话/房源地址等······" class="layui-input">
+                                </div>
+                                <label class="layui-form-label">搜索</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="money_title money_titles">
+                    <p>应付金额：<span>100,000.00</span>元      已付金额：<span>80,000.00</span>元      待付金额：<span>20,000.00</span>元</p>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th> 账单类型</th>
+                        <th>房源地址/承租人</th>
+                        <th>项目</th>
+                        <th> 金额 </th>
+                        <th>应收款日</th>
+                        <th> 待收金额</th>
+                        <th>已收金额</th>
+                        <th> 账单状态 </th>
+                        <th> 备注</th>
+                        <th> 操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>品牌公寓账单</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金 <br/>2019-01-08至2019-02-07 </td>
+                        <td>9,000.00</td>
+                        <td> 2019-01-08</td>
+                        <td> 2019-01-08</td>
+                        <td>微信转账</td>
+                        <td>已付款</td>
+                        <td>安心友家</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>品牌公寓账单</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金 <br/>2019-01-08至2019-02-07 </td>
+                        <td>9,000.00</td>
+                        <td> 2019-01-08</td>
+                        <td> 2019-01-08</td>
+                        <td>微信转账</td>
+                        <td>已付款</td>
+                        <td>安心友家</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>品牌公寓账单</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金 <br/>2019-01-08至2019-02-07 </td>
+                        <td>9,000.00</td>
+                        <td> 2019-01-08</td>
+                        <td> 2019-01-08</td>
+                        <td>微信转账</td>
+                        <td>已付款</td>
+                        <td>安心友家</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看合同</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>品牌公寓账单</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>房屋租金 <br/>2019-01-08至2019-02-07 </td>
+                        <td>9,000.00</td>
+                        <td> 2019-01-08</td>
+                        <td> 2019-01-08</td>
+                        <td>微信转账</td>
+                        <td>已付款</td>
+                        <td>安心友家</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看合同</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="mypage  ph_dis">
+                        <a href="#">上一页</a>
+                        <a href="#" class="linking">1</a>
+                        <a href="#" class="unlink">2</a>
+                        <a href="#" class="unlink">3</a>
+                        <a href="#" class="unlink">4</a>
+                        <a href="#">下一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 业绩申请弹出框-->
+    <div class="flex yes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn ye_close">
+                 <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">房源地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入房源地址" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">合同号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入合同号" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩类型：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">写作</option>
+                                <option value="1">阅读</option>
+                                <option value="2">游戏</option>
+                                <option value="3">音乐</option>
+                                <option value="4">旅行</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应收业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item role-item">
+                        <label class="layui-form-label">角色：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">李四</option>
+                                <option value="2">王五</option>
+                                <option value="3">赵六</option>
+                            </select>
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                            <div class="jia"><i class="iconfont icon-jiahao1"></i></div>
+                            <div class="jian"><i class="iconfont icon-jianhaocu"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 添加合同-->
+    <div class="flex hes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title">无合同业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn hes_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩类型：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">写作</option>
+                                <option value="1">阅读</option>
+                                <option value="2">游戏</option>
+                                <option value="3">音乐</option>
+                                <option value="4">旅行</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应收业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入房源地址" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">实收业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入房源地址" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入合同号" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应收业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item role-item">
+                        <label class="layui-form-label">角色：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">李四</option>
+                                <option value="2">王五</option>
+                                <option value="3">赵六</option>
+                            </select>
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                            <div class="jia"><i class="iconfont icon-jiahao1"></i></div>
+                            <div class="jian"><i class="iconfont icon-jianhaocu"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        $(".ye").click(function(){
+            $(".yes").show();
+        })
+        $(".ye_close").click(function(){
+            $(".yes").hide();
+        })
+        $(".he").click(function(){
+            $(".hes").show();
+        })
+        $(".hes_close").click(function(){
+            $(".hes").hide();
+        })
+    </script>
+</body>
+</html>

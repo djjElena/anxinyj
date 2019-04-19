@@ -1,0 +1,236 @@
+.main-content {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+.layui-form-label{
+    font-size: 14px;
+    width: 100px;
+}
+.layui-form-item .layui-inline{
+    margin-bottom: 0;
+}
+.layui-table th {
+    text-align: center;
+}
+.shose .layui-btn{
+   float: right;
+    margin-bottom: 20px;
+}
+.shose .layui-form-label{
+    width: 60px;
+    background-color: #517BEA;
+    color: #fff;
+}
+.shose .layui-form-item .layui-input-inline{
+    margin-right: 0px;
+}
+.shose .layui-form-item {
+    float: right;
+}
+.flex{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    overflow: auto;
+    margin: 0;
+    display: none;
+}
+.el-dialog{
+    width: 520px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    top: 15%;
+}
+.el-dialog__header {
+    padding: 20px 20px 0;
+}
+.el-dialog__title {
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f243d;
+}
+.el-dialog .el-dialog__headerbtn {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+}
+.el-dialog__headerbtn {
+    float: right;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.el-dialog__headerbtn i{
+    font-size: 20px;
+    color: #BFC3D9;
+}
+.el-dialog__header:after {
+    clear: both;
+}
+.el-dialog__header:after, .el-dialog__header:before {
+    display: table;
+    content: "";
+}
+.popDialog .el-dialog__body {
+    border-top: 1px solid #e0e6ed;
+    border-bottom: 1px solid #e0e6ed;
+}
+.el-dialog__body {
+    padding: 30px 20px;
+    color: #484d6a;
+    font-size: 14px;
+}
+.role-item .layui-form-select{
+    width: 40%;
+    margin-right: 10px;
+    display: inline-block;
+}
+.role-item .layui-form-select .layui-input{
+    width: 100%;
+}
+.role-item .layui-input{
+    width: 30%;
+    display: inline-block;
+}
+.jia,.jian{
+  display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 20px;
+    color: #BFC3D9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:1px solid #BFC3D9;
+}
+.layui-center{
+    text-align: center;
+}
+.money_title{
+    padding: 8px 10px;
+    background-color: #FFFDF5;
+    border: 1px solid #FFF7E5;
+}
+.money_title p{
+    font-size: 16px;
+    color: #3A3A3A;
+}
+.money_title p span{
+    color: #507BEA;
+}
+.brand{
+    border-bottom: 1px solid #D3DCE6;
+}
+.brand a{
+    display: inline-block;
+    padding: 20px 15px;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 3px solid transparent;
+}
+.brand a.active{
+    border-bottom: 3px solid #517BEA;
+}
+.chose{
+    padding: 20px 0;
+}
+.lay_zhang{
+    padding: 15px 0;
+    border-bottom: 2px solid #F4F6F9;
+}
+.lay_zhang .layui-form-item{
+    display: inline-block;
+}
+.lay_zhang .layui-input-block {
+    margin-left: 52px;
+}
+.money_titles{
+    margin: 20px 0;
+}
+/*Ò³Âë*/
+.mypage {
+    clear: both;
+    width:100%;
+    height:auto;
+    border:#517BEA 0px solid;
+    margin:0 auto;
+    padding: 20px 0;
+    text-align:center;
+    font-size: 16px;
+}
+.pc_dis{
+    display: none;
+}
+.mypage a{
+    color:#4d555d;
+    width:auto;
+    height:auto;
+    padding:6px 12px;
+    font-size:16px;
+    margin-right:5px;
+    border: 1px solid #DBDBDB;
+    background: #F5F5F5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.mypage span{
+    color:#717171;
+    width:auto;
+    height:auto;
+    padding:10px;
+    font-size:16px;
+    border-radius:5px;
+    margin-right:5px;
+}
+.mypage .linking,.mypage a:hover {
+    color: #fff;
+    background: #517BEA;
+    border:1px solid transparent;
+    border-radius: 4px;
+}
+.layui-table td, .layui-table th{
+    text-align: center;
+}
+.dai{
+    color: #517BEA;
+}
+.yi{
+    color: #28BC68;
+}
+.col_lv{
+    color: #28BC68;
+}
+.brand button{
+    margin-top: 14px;
+}
+.flex .layui-form-label {
+    width: 140px;
+}
+.flex .layui-input-block {
+    margin-left: 150px;
+}
+.flex .layui-form-label span{
+    color: #FF2727;
+}
+.ji-jia{
+    margin-bottom: 15px;
+}

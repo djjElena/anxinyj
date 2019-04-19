@@ -1,0 +1,35 @@
+<div>
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="#"><b class="iconfont  icon-shouye1"></b> <span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><b class="iconfont icon-louceng0"></b>  <span>房源</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="tj" ><img src="image/add.png" alt=""/></span></a>
+            </li>
+            <li>
+                <a href="#"><b class="iconfont icon-fuwu1"></b>  <span>服务</span></a>
+            </li>
+            <li class="active">
+                <a href="#"><b class="iconfont icon-sself"></b>  <span>我的</span></a>
+            </li>
+            <div class="both"></div>
+        </ul>
+    </div>
+    <div class="jiahao">
+        <ul>
+            <li><a href="#"><b><i class="iconfont icon-jiudian1"></i></b>添加房源</a></li>
+            <li><a href="#"><b><i class="iconfont icon-yezhuguanli-"></i></b>新增业主合同</a></li>
+            <li><a href="#"><b><i class="iconfont icon-dengji"></i></b>租客登记</a></li>
+            <li><a href="#"><b><i class="iconfont icon-luru"></i></b>合同录入</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $('.footer ul li a span.tj img').click(function () {
+            $('.jiahao').toggleClass('active');
+    })
+</script>

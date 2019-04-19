@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/mobileSelect.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/laydate/laydate.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/mobileSelect.js"></script>
+</head>
+<body>
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1>服务</h1>
+    </div>
+    <div class="fwxq-middle xzylxq tjfyptxx">
+        <h1>业主家具家电</h1>
+        <div class="jiadian">
+            <ul>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>冰箱</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>洗衣机</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>油烟机</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>餐桌</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>餐椅</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>沙发</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>单人床</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>微波炉</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+                <li>
+                    <span class="jian">－</span>
+                    <p>
+                        <span>热水器</span>
+                        <span class="num">0</span>
+                    </p>
+                    <span class="jia">＋</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="nextstep">
+            <a href="#">确定</a>
+        </div>
+        <div class="both"></div>
+    </div>
+
+    <script>
+        $('.jia').click(function(){
+            if(($($(this).parent().children()[1]).children()[1].innerHTML)<10){
+                ($($(this).parent().children()[1]).children()[1].innerHTML)++;
+            }
+        });
+        $('.jian').click(function(){
+            if(($($(this).parent().children()[1]).children()[1].innerHTML)>=1){
+                ($($(this).parent().children()[1]).children()[1].innerHTML)--
+            }
+            else{
+                ($($(this).parent().children()[1]).children()[1].innerHTML)=0;
+            }
+        })
+    </script>
+</body>
+</html>

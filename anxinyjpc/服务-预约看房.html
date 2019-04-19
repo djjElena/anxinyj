@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>预约看房</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>服务&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a> 预约看房 </h1>
+            </div>
+            <div class="main-content">
+                <form class="layui-form" action="">
+                    <div class="layui-row lay_zhang">
+                        <div class="">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">查看日期：</label>
+                                <div class="layui-input-block">
+                                    <input type="radio" name="state" value="全部状态" title="全部状态" checked>
+                                    <input type="radio" name="state" value="待处理" title="待处理" >
+                                    <input type="radio" name="state" value="已处理" title="已处理" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                                                                                                                                                                                           操作
+                <table class="layui-table chu_table">
+                    <thead>
+                    <tr>
+                        <th>  姓名 </th>
+                        <th>房源地址 </th>
+                        <th> 联系电话  </th>
+                        <th>   预约看房时间  </th>
+                        <th> 状态  </th>
+                        <th> 操作  </th>
+                        <th>备注</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>世纪金源</td>
+                        <td> 12345678910</td>
+                        <td>2019-01-11</td>
+                        <td>待处理</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">已完成</button>
+                            <button class="layui-btn ">处理中</button>
+                        </td>
+                        <td>房主目前不方便接听，
+                            1月10号再次回电</td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>世纪金源</td>
+                        <td> 12345678910</td>
+                        <td>2019-01-11</td>
+                        <td>待处理</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">已完成</button>
+                            <button class="layui-btn ">处理中</button>
+                        </td>
+                        <td>房主目前不方便接听，
+                            1月10号再次回电</td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>世纪金源</td>
+                        <td> 12345678910</td>
+                        <td>2019-01-11</td>
+                        <td>待处理</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">已完成</button>
+                            <button class="layui-btn ">处理中</button>
+                        </td>
+                        <td>房主目前不方便接听，
+                            1月10号再次回电</td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>世纪金源</td>
+                        <td> 12345678910</td>
+                        <td>2019-01-11</td>
+                        <td>待处理</td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">已完成</button>
+                            <button class="layui-btn ">处理中</button>
+                        </td>
+                        <td>房主目前不方便接听，
+                            1月10号再次回电</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <div class="mypage  ph_dis">
+                        <a href="#">上一页</a>
+                        <a href="#" class="linking">1</a>
+                        <a href="#" class="unlink">2</a>
+                        <a href="#" class="unlink">3</a>
+                        <a href="#" class="unlink">4</a>
+                        <a href="#">下一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        $(".chu_table tbody tr td:nth-child(6) button").click(function(){
+            var a=$(this).html();
+           /* console.log(a);*/
+           $(this).parent().prev().html(a);
+
+        })
+    </script>
+</body>
+</html>

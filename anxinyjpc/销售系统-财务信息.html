@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <!--<title>账单列表</title>-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <!--<link rel="stylesheet" href="css/a.css"/>-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>销售系统     &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#"></a>租约列表 </h1>
+            </div>
+            <div class="main-content">
+                <div class="brand">
+                    <a href="#"> <span>租约详情 </span> </a>
+                    <a href="#" class="active"> <span>服务信息</span> </a>
+                    <a href="#"> <span>合同信息</span> </a>
+                    <a href="#" > <span>业绩详情</span> </a>
+                    <button class="layui-btn layui-btn-primary an rt">修改</button>
+                    <button class="layui-btn layui-btn-primary an rt ">续租</button>
+                    <button class="layui-btn layui-btn-primary an rt ye">退房</button>
+                    <button class="layui-btn layui-btn-primary an rt">删除</button>
+                    <button class="layui-btn layui-btn-primary an rt he">业绩申请</button>
+                    <button class="layui-btn layui-btn-primary an rt weiyue">违约金业绩申请</button>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th colspan="6" class="zb"> 天时苑小区-45号楼2单元101</th>
+
+                    </tr>
+                    </thead>
+                    <tbody class="zdqq">
+                    <tr>
+                        <td>承租人：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;张三</td>
+                        <td>承租人手机：1234567788</td>
+                    </tr>
+                    <tr>
+                        <td>第一次签约&nbsp;&nbsp;&nbsp;&nbsp;租金：499/月（电子合同）</td>
+                        <td>租期&nbsp;&nbsp;&nbsp;&nbsp;2018.12.01-2019.12.14</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="zyzd">
+                    <h2>租约账单</h2>
+                    <p class="tianjiazd">添加账单</p>
+                </div>
+                <div class="accountArea">
+                    <div class="thead">
+                        <ul>
+                            <li>项目</li>
+                            <li>应收金额</li>
+                            <li>应收款日</li>
+                            <li>已收金额</li>
+                            <li>收款日期</li>
+                            <li>状态</li>
+                            <li>操作</li>
+                            <li>备注</li>
+                        </ul>
+                    </div>
+                    <div class="tbody">
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>押金
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>第一期（2018.12.15-2019.4.14）
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>扣款
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他账务-->
+                <div class="zyzd">
+                    <h2>其他账务</h2>
+                    <p class="tianjiaxm">添加项目</p>
+                </div>
+                <div class="accountArea">
+                    <div class="thead">
+                        <ul>
+                            <li>项目</li>
+                            <li>应收金额</li>
+                            <li>应收款日</li>
+                            <li>已收金额</li>
+                            <li>收款日期</li>
+                            <li>状态</li>
+                            <li>操作</li>
+                            <li>备注</li>
+                        </ul>
+                    </div>
+                    <div class="tbody">
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>押金
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>第一期（2018.12.15-2019.4.14）
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="el-collapse-item">
+                            <div class="el-collapse-item__header">
+                                <ul class="accountsListUl">
+                                    <li>
+                                        <i class="ownerd__toggleIcon"></i>扣款
+                                    </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li>0.00</li>
+                                    <li> - </li>
+                                    <li><!----> <!---->
+                                        <span class="cancelPay">已付款</span>
+                                    </li>
+                                    <li> - </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="el-collapse-item__wrap" style="display: none;">
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl1">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            房屋押金
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button1">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu1" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail1" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl2">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            服务费
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button2">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu2" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail2" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemBill">
+                                    <ul class="itemBillUl itemBillUl3">
+                                        <li>
+                                            <span>
+                                                <input type="checkbox" class="el-checkbox__original" value="">
+                                            </span>
+                                            租金涨价
+                                        </li>
+                                        <li>233.00</li>
+                                        <li> 2018.11.06</li>
+                                        <li>0.00</li>
+                                        <li>
+                                            <span> - </span>
+                                        </li>
+                                        <li>
+                                            <span class="cancelPay">待付款</span>
+                                        </li>
+                                        <li>
+                                            <div class="el-dropdown">
+                                                <button type="button" class="el-button el-button3">
+                                                    <span>操作</span>
+                                                </button>
+                                                <ul class="el-dropdown-menu el-dropdown-menu3" style="display: none;">
+                                                    <li class="el-dropdown-menu__item">收款</li>
+                                                    <li class="el-dropdown-menu__item">结束账单</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="remarkLi">
+                                            <span class="el-tooltip item">无</span>
+                                        </li>
+                                    </ul>
+                                    <div class="billDetail billDetail3" style="display: none;">
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                        <div class="feeItem">
+                                            <span class="itemName">账单金额：</span>
+                                            <span class="itemPrice">233.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <!-- 添加账单-->
+    <div class="tianjia tianjiazhangdan">
+            <div class="biaoti">
+                <h3>添加账单</h3>
+                <span class="zd-close">×</span>
+            </div>
+            <ul>
+                <li class="xq">
+                    <label><em class="org">*</em>账单项目：</label>
+                    <span>
+                        <select name="">
+                            <option value="" selected>请选择</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <label><em class="org">*</em>应收金额：</label>
+                    <span><input type="text" placeholder="请输入金额"/>元</span>
+                </li>
+                <li class="xq">
+                    <label><em class="org">*</em>应收款日：</label>
+                    <span><input type="text" placeholder="请输入收款日期" id='tuifangdate' class="jianpan"/></span>
+                </li>
+                <li class="xq">
+                    <label><em class="org">*</em>所属账期：</label>
+                    <span>
+                        <select name="">
+                            <option value="" selected>无</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="xq">
+                    <label>照片凭证：</label>
+                    <span>
+                        <img src="images/zd.png" alt=""/>
+                    </span>
+                </li>
+                <li class="xq miaoshu beizhu">
+                    <label>备注：</label>
+                    <span><textarea name=""   cols="30" rows="10" placeholder="请输入备注"></textarea></span>
+                </li>
+            </ul>
+            <div class="fangshi rt fs">
+                <p>保存</p>
+                <p>取消</p>
+            </div>
+        </div>
+    <!-- 添加项目-->
+    <div class="tianjia tianjiazhangdan1">
+            <div class="biaoti">
+                <h3>添加项目</h3>
+                <span class="zd-close">×</span>
+            </div>
+            <ul>
+                <li class="xq">
+                    <label><em class="org">*</em>账单项目：</label>
+                    <span>
+                        <select name="">
+                            <option value="" selected>请选择</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <label><em class="org">*</em>应收金额：</label>
+                    <span><input type="text" placeholder="请输入金额"/>元</span>
+                </li>
+                <li class="xq">
+                    <label><em class="org">*</em>应收款日：</label>
+                    <span><input type="text" placeholder="请输入收款日期" id='tuifangdatee' class="jianpan"/></span>
+                </li>
+                <li class="xq">
+                    <label><em class="org">*</em>所属账期：</label>
+                    <span>
+                        <select name="">
+                            <option value="" selected>无</option>
+                            <option value="">房租</option>
+                            <option value="">服务费</option>
+                            <option value="">房租</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="xq">
+                    <label>照片凭证：</label>
+                    <span>
+                        <img src="images/zd.png" alt=""/>
+                    </span>
+                </li>
+                <li class="xq miaoshu beizhu">
+                    <label>备注：</label>
+                    <span><textarea name="" id="" cols="30" rows="10" placeholder="请输入备注"></textarea></span>
+                </li>
+            </ul>
+            <div class="fangshi rt fs">
+                <p>保存</p>
+                <p>取消</p>
+            </div>
+        </div>
+    <!-- 退房弹出框-->
+    <div class="flex yes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">发起退房</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn ye_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">财务终止日期：</label>
+                        <div class="layui-input-block">
+                            <input type="text" id="tuifangdate" class="layui-input jianpan" placeholder="请输入日期">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">退房原因：</label>
+                        <div class="layui-input-block">
+                            <textarea   class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">租金欠款：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应退款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  readonly="readonly" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">扣款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">实际退款：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">退还途径：</label>
+                        <div class="layui-input-block">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">微信</option>
+                                <option value="1">支付宝</option>
+                                <option value="2">银行卡</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">上传交接单：</label>
+                        <div class="layui-input-block">
+                            <img src="images/sc1.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 业绩申请-->
+    <div class="flex hes">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn hes_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">合同号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="HT123456789" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">房源地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="朝阳区-天时苑小区-45号楼2单元101" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="ye" lay-filter="filter" value="收房人"  title="收房人" >
+                            <input type="radio" name="ye" lay-filter="filter" value="出房人"  checked title="出房人" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩申请人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" value="张三" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">免租期业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期每日房价" class="layui-input kd">
+                            <input type="text" placeholder="免租期总业绩" class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">价差业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入应计免租期天数" class="layui-input kd">
+                            <input type="text" placeholder="请输入实计免租期天数" class="layui-input kd">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">业绩1</option>
+                                <option value="1">业绩1</option>
+                                <option value="2">业绩1</option>
+                                <option value="3">业绩1</option>
+                                <option value="4">业绩1</option>
+                            </select>
+                            <input style="margin-top:15px;" type="text" placeholder="免租期总业绩" class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">非退业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入非退业绩" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">配置成本：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入配置成本" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">维修保洁成本：</label>
+                        <div class="layui-input-block">
+                            <input type="text" placeholder="请输入维修保洁成本" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">业绩统计：</label>
+                        <div class="layui-input-block">
+                            <input type="text"  class="layui-input small">
+                            <button class="layui-btn">计算</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item role-item">
+                        <label class="layui-form-label">角色：</label>
+                        <div class="layui-input-block ji-jia">
+                            <select>
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">李四</option>
+                                <option value="2">王五</option>
+                                <option value="3">赵六</option>
+                            </select>
+                            <input type="text" placeholder="请输入应收业绩" class="layui-input">
+                            <div class="jia"><i class="iconfont icon-jiahao1"></i></div>
+                            <div class="jian"><i class="iconfont icon-jianhao"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">备注：</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 续租-->
+    <div class="flex xues">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn xues_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类型：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="ye" value="收房人" checked title="收房人" >
+                            <input type="radio" name="ye" value="出房人" title="出房人" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请人：</label>
+                        <div class="layui-input-block">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">张三</option>
+                                <option value="2">张三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">服务费：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 违约金-->
+    <div class="flex weiyues">
+        <div class="el-dialog">
+            <div class="el-dialog__header">
+                <span class="el-dialog__title" style="display: inherit;text-align: center;">违约金业绩申请</span>
+                <button type="button" aria-label="Close" class="el-dialog__headerbtn weiyues_close">
+                    <i class="iconfont icon-guanbi1"></i>
+                </button>
+            </div>
+            <div class="el-dialog__body">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请人：</label>
+                        <div class="layui-input-block">
+                            <select class="select">
+                                <option value=""></option>
+                                <option value="0">张三</option>
+                                <option value="1">张三</option>
+                                <option value="2">张三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">违约金业绩：</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-center">
+                        <button class="layui-btn">提交</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+            form.on('radio(filter)', function(data){
+                var aa = data.value;
+                if(aa=='收房人'){
+                    $('.xues').show();
+                    $('.hes').hide();
+                }
+            });
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#tuifangdate'
+                ,range: true
+            });
+            laydate.render({
+                elem: '#tuifangdatee'
+                ,range: true
+            });
+
+        })
+        $(".ye").click(function(){
+            $(".yes").show();
+        })
+        $(".ye_close").click(function(){
+            $(".yes").hide();
+        })
+        $(".he").click(function(){
+            $(".hes").show();
+        })
+        $(".hes_close").click(function(){
+            $(".hes").hide();
+        })
+        $(".xue").click(function(){
+            $(".xues").show();
+        })
+        $(".xues_close").click(function(){
+            $(".xues").hide();
+        })
+        $(".weiyue").click(function(){
+            $(".weiyues").show();
+        })
+        $(".weiyues_close").click(function(){
+            $(".weiyues").hide();
+        })
+        /*增加删除服务区域*/
+        $('.jia').click(function(event) {
+            var myDom = $(this).parent('.ji-jia').clone(true);
+            myDom.find('input').val('');
+            $(this).parent('.ji-jia').after(myDom);
+        });
+        $('.jian').click(function(event) {
+            var className = $(this).parent('.ji-jia').attr('class').split(' ')[1];
+            if($('.' + className).length <= 1){
+                return ;
+            }
+            $(this).parent('.ji-jia').remove();
+        });
+        $('.tianjiazhangdan').hide();
+        $('.tianjiazd').click(function(){
+            $('.tianjiazhangdan').show();
+        })
+        $('.zd-close').click(function(){
+            $('.tianjiazhangdan').hide();
+            $('.tianjiazhangdan1').hide();
+        })
+        $('.el-collapse-item__header').click(function(){
+            $('.el-collapse-item__wrap').toggle();
+        })
+        $('.tianjiazhangdan1').hide();
+        $('.tianjiaxm').click(function(){
+            $('.tianjiazhangdan1').show();
+        })
+    </script>
+    <script>
+        $('.el-collapse-item__header').click(function(){
+//            $('.el-collapse-item__wrap').toggle()
+            $('.ownerd__toggleIcon').toggleClass('xuanzhuan');
+
+        })
+        $('.el-button1').click(function(){
+            $('.el-dropdown-menu1').toggle();
+        })
+        $('.itemBillUl1').click(function(){
+            $('.billDetail1').toggle();
+        })
+        $('.el-button2').click(function(){
+            $('.el-dropdown-menu2').toggle();
+        })
+        $('.itemBillUl2').click(function(){
+            $('.billDetail2').toggle();
+        })
+        $('.el-button3').click(function(){
+            $('.el-dropdown-menu3').toggle();
+        })
+        $('.itemBillUl3').click(function(){
+            $('.billDetail3').toggle();
+        })
+    </script>
+</body>
+</html>

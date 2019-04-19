@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Sbt5slrZOkMZXcQtUZRy30A2WNAdgBG"></script>
+</head>
+<body>
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1><i class="iconfont icon-sousuo"></i><input type="text" placeholder="请输入小区名称" id="suggest"/></h1>
+    </div>
+    <div class="xiaoqu" style="display: none;">
+        <div class="diqu">
+            <i class="iconfont icon-weizhi"></i> <span id="searchResultPanel"></span>
+        </div>
+        <div class="xiaoquname" id="quyu" >
+            <!--紫金小区-->
+        </div>
+        <div id="l-map" style="display: none;"></div>
+        <div class="tjnewxq">
+            <p>没有找到您的小区？您可以</p>
+            <a href="#">添加新小区</a>
+        </div>
+    </div>
+    <div class="foot">
+        <script>
+            $('.foot').load('footer.html')
+        </script>
+        <div class="both"></div>
+    </div>
+    <script>
+        var map = new BMap.Map("l-map");
+        map.centerAndZoom("北京",14); // 初始化地图,设置城市和地图级别。
+        var acc = new BMap.Autocomplete(    //建立一个自动完成的对象
+                {"input" : "suggest"
+                    ,"location" : map
+                });
+        var geoc = new BMap.Geocoder();
+        function G(id) {
+            return document.getElementById(id);
+        }
+
+        acc.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+            var str = "";
+            var _value = e.fromitem.value;
+//            console.log(e.fromitem.value);
+            var value = "";
+            if (e.fromitem.index > -1) {
+                value = _value.province +  _value.city +  _value.district /*+  _value.street + _value.business*/;
+//                console.log(value);
+            }
+            str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+            value = "";
+            if (e.toitem.index > -1) {
+                _value = e.toitem.value;
+                value = _value.province +  _value.city +  _value.district/* +  _value.street +  _value.business*/;
+            }
+            str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+            G("searchResultPanel").innerHTML = str;
+        });
+
+        var myValue;
+        acc.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+            var _value = e.item.value;
+            myValue = _value.province +  _value.city +"-"+  _value.district /*+  _value.street +  _value.business*/;
+            myQuyu = _value.business;
+            G("searchResultPanel").innerHTML =/*"onconfirm<br />index = " + e.item.index + "<br />myValue = " + */myValue;
+            G('quyu').innerHTML = myQuyu;
+            $('.xiaoqu').show();
+            console.log($('suggest').innerHTML)
+        });
+
+    </script>
+</body>
+</html>

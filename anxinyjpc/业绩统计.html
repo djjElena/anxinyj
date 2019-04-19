@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>业绩统计</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_66s8datjlfd.css"/>
+    <link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headleft.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/h.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <!-- 头部-->
+    <div class="daohang">
+        <script>$(".daohang").load("header.html");</script>
+    </div>
+    <!-- 中间内容-->
+    <div class="main-md">
+        <!-- 左边-->
+        <div class="left-content">
+            <script>$(".left-content").load("left.html");</script>
+        </div>
+        <!-- 右边-->
+        <div class="right-content">
+            <div class="title">
+                <h1>我的业绩   &nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;<a href="#">业绩统计</a> </h1>
+            </div>
+            <div class="main-content">
+                <div class="money_title">
+                    <p>总应收业绩：<span>17,020,935.00</span>元    总实收业绩：<span>17,020,935.00</span>元</p>
+                </div>
+                <div class="brand">
+                    <a href="#" class="active"> <span>品牌公寓业绩</span> </a>
+                    <a href="#"> <span>品牌公寓续租业绩</span> </a>
+                    <a href="#"> <span>民宿业绩</span> </a>
+                    <a href="#"> <span>企业咨询业绩</span> </a>
+                    <a href="#"> <span>新房业绩</span> </a>
+                    <a href="#"> <span>二手房业绩</span> </a>
+                    <a href="#"> <span>普租业绩</span> </a>
+                    <a href="#"> <span>其他业绩</span> </a>
+                </div>
+                <form class="layui-form" action="">
+                    <div class="layui-row">
+                        <div class=" chose ">
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">房源地址：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">合同号：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">录入日期：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input" id="test6" placeholder=" 开始日期--结束日期 " lay-key="">
+                                    </div>
+                                </div>
+                                <button class="layui-btn">查询</button>
+                                <button class="layui-btn rt">导出列表</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+                <div class="money_title">
+                    <p>当月新增业绩：<span>20,000.00</span>元       当月续签业绩：<span>1,935.00</span>元       当月总业绩：<span>21,935.00</span>元  </p>
+                </div>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th> 日期</th>
+                        <th>房源/地址/负责人</th>
+                        <th>录入次数</th>
+                        <th>总业绩数</th>
+                        <th>分配业绩</th>
+                        <th> 服务费</th>
+                        <th>日期</th>
+                        <th>一级审核 </th>
+                        <th>二级审核</th>
+                        <th>管理员审核</th>
+                        <th> 操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2019/01/11</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>第一次</td>
+                        <td> 9,500.00</td>
+                        <td> 2,500.00</td>
+                        <td> ------</td>
+                        <td>2019-01-11</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看详情</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2019/01/11</td>
+                        <td>远洋新天地-3栋0单元401/张嘉译</td>
+                        <td>第一次</td>
+                        <td> 9,500.00</td>
+                        <td> 2,500.00</td>
+                        <td> ------</td>
+                        <td>2019-01-11</td>
+                        <td> <span class="dai">待审核</span> </td>
+                        <td><span class="dai">待审核</span> </td>
+                        <td> <span class="yi">已审核</span> </td>
+                        <td>
+                            <button class="layui-btn layui-btn-primary">查看详情</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="money_title">
+                    <p>当月品牌公寓总业绩： <span>20,000.00</span>元</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/layui/layui.all.js"></script>
+    <script>
+        !function(){
+            var form = layui.form
+                    ,layer = layui.layer;
+        }();
+        layui.use('table', function(){
+            var table = layui.table;
+        });
+        layui.use('laydate', function(){
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#test6'
+                ,range: true
+            });
+        })
+    </script>
+</body>
+</html>

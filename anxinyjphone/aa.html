@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Sbt5slrZOkMZXcQtUZRy30A2WNAdgBG"></script>
+    <style>
+        #l-map{
+            width:800px;
+            height:800px;
+            margin-top:50px;
+            border:1px solid red;
+        }
+        #r-result{
+            margin-bottom: 30px;;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<div id="l-map"></div>-->
+    <div id="r-result">请输入:<input type="text" id="suggest" size="20" value="百度" style="width:150px;" /></div>
+    <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:block;"></div>
+
+
+    地址：<input type="text" id="suggestId"><!---放置地图数据------>
+    <input type="text" id='zuobiao'><!---放置坐标数据------>
+    <div id="l-map"></div> <!---加载地图------>
+
+    <!--下面的是script中的代码：-->
+    <script>
+        var map = new BMap.Map("l-map");
+        map.centerAndZoom("北京",14); // 初始化地图,设置城市和地图级别。
+        var ac = new BMap.Autocomplete( //建立一个自动完成的对象
+                {"input" : "suggestId"
+                    ,"location" : map
+                });
+        var acc = new BMap.Autocomplete(    //建立一个自动完成的对象
+                {"input" : "suggest"
+                    ,"location" : map
+                });
+
+
+//        var point = new BMap.Point();
+//        map.centerAndZoom(point,14);
+        //添加导航控件
+        map.addControl(new BMap.NavigationControl());
+        //添加缩放控件
+        map.addControl(new BMap.ScaleControl());
+        //添加概览图
+        map.addControl(new BMap.OverviewMapControl());
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl());
+
+//        var marker = new BMap.Marker(point);// 创建标注
+        //默认动画
+//        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        //创建标注
+//        map.addOverlay(marker);         //将标注添加到地图中
+//        map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+        var geoc = new BMap.Geocoder();
+//        map.addOverlay(marker); // 将标注添加到地图中
+//        marker.enableDragging(); //设置可拖拽
+//        marker.addEventListener("dragend", function(e) { //拖动事件
+//            var pt = e.point;
+//            var dizhi;
+//            geoc.getLocation(pt, function (rs) {
+//                var addComp = rs.addressComponents;
+//                dizhi = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+//                document.getElementById('suggestId').value = dizhi;//更新地址数据
+//                var content = dizhi + "<br/><br/>经度：" + e.point.lng + "<br/>纬度：" + e.point.lat;
+//                var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+//                marker.openInfoWindow(infoWindow, map.getCenter());//将经纬度信息显示在提示框内
+//            });
+//            document.getElementById("zuobiao").value = e.point.lng + ", " + e.point.lat;//打印拖动结束坐标。
+//        })
+        function G(id) {
+            return document.getElementById(id);
+        }
+
+        acc.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+            var str = "";
+            var _value = e.fromitem.value;
+//            console.log(e.fromitem.value);
+            var value = "";
+            if (e.fromitem.index > -1) {
+                value = _value.province +  _value.city +  _value.district +  _value.street + _value.business;
+//                console.log(value);
+            }
+            str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+
+            value = "";
+            if (e.toitem.index > -1) {
+                _value = e.toitem.value;
+                value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+            }
+            str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+            G("searchResultPanel").innerHTML = str;
+        });
+
+        var myValue;
+        acc.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+            var _value = e.item.value;
+//            console.log(e.item.value);
+            myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+            G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+            setPlace();
+            console.log(G('searchResultPanel'))
+//
+        });
+
+        function setPlace() {
+
+            function myFun() {
+                var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+                map.centerAndZoom(pp, 18);
+                map.addOverlay(new BMap.Marker(pp));    //添加标注
+                var pointt = new BMap.Point(local.getResults().getPoi(0).point.lng,local.getResults().getPoi(0).point.lat);
+                map.centerAndZoom(pointt,14);
+
+                var markerr = new BMap.Marker(pointt);// 创建标注
+                //默认动画
+//                markerr.setAnimation(BMAP_ANIMATION_BOUNCE);
+                //创建标注
+                map.addOverlay(markerr);         //将标注添加到地图中
+                map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+                var geocc = new BMap.Geocoder();
+                map.clearOverlays(new BMap.Marker(pp));    //清除地图上所有覆盖物
+                map.addOverlay(markerr); // 将标注添加到地图中
+                markerr.enableDragging(); //设置可拖拽
+                markerr.addEventListener("dragend", function(e) { //拖动事件
+
+                    var pt = e.point;
+                    var dizhi;
+                    geoc.getLocation(pt, function (rs) {
+                        var addComp = rs.addressComponents;
+                        dizhi = addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+                        document.getElementById('suggestId').value = dizhi;//更新地址数据
+                        var content = dizhi + "<br/><br/>经度：" + e.point.lng + "<br/>纬度：" + e.point.lat;
+                        var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+                        markerr.openInfoWindow(infoWindow, map.getCenter());//将经纬度信息显示在提示框内
+                    });
+                    document.getElementById("zuobiao").value = e.point.lng + ", " + e.point.lat;//打印拖动结束坐标。
+                })
+            }
+            var local = new BMap.LocalSearch(map, { //智能搜索
+                onSearchComplete: myFun
+            });
+            local.search(myValue);
+
+
+
+        }
+
+
+
+
+</script>
+
+</body>
+</html>

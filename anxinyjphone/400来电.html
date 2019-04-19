@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1031196_9f1t3xz4oio.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+    <div class="tou">
+        <a href="#" class="lf"><i class="iconfont icon-jiantou21"></i></a>
+        <h1>400来电</h1>
+    </div>
+    <div>
+        <div class="fwxq-bottom fyxt laidian">
+            <ul class="fyxt-top">
+                <li>
+                    <a href="#" id="fjss"><span>全部来电</span><i class="sanjiaoxing"></i></a>
+                </li>
+                <li>
+                    <a href="#" id="xqlb"><span>过去7天</span><i class="sanjiaoxing"></i></a>
+                </li>
+                <div class="both"></div>
+            </ul>
+            <div class="zhankai">
+                <ul class="fjss" style="display: none;">
+                    <li>全部来电</li>
+                    <li>已回拨</li>
+                    <li>未回拨</li>
+                    <li>已接来电</li>
+                    <li>未接来电</li>
+                </ul>
+                <ul class="xqlb" style="display: none;">
+                    <li>过去7天</li>
+                    <li>过去30天</li>
+                </ul>
+            </div>
+        </div>
+        <div class="dianhua">
+            <ul>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li class="org">15735981883 未接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>未知来源</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li>15735981883 已接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>西长安壹号34号院-4栋单元1203</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li class="org">15735981883 未接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>未知来源</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li>15735981883 已接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>西长安壹号34号院-4栋单元1203</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li>15735981883 已回拨</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>未知来源</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li>15735981883 未回拨</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>西长安壹号34号院-4栋单元1203</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li class="org">15735981883 未接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>未知来源</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ul class="dh">
+                            <li>15735981883 已接</li>
+                            <li><img src="image/dh.png" alt=""/></li>
+                            <li>西长安壹号34号院-4栋单元1203</li>
+                            <li>2019-02-24 10:08:59</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="both"></div>
+    </div>
+    <div class="foot">
+        <script>
+            $('.foot').load('footer.html')
+        </script>
+        <div class="both"></div>
+    </div>
+    <script>
+        $('.fyxt ul li a').click(function(){
+           $($(this).children()[1]).toggleClass('xuanzhuan')
+        })
+        $('#fjss').click(function () {
+            $('#fjss').addClass('active');
+            $('#xqlb').removeClass('active');
+            $('.fjss').toggle();
+            $('.fjss').siblings().hide();
+            $('#xqlb i').removeClass('xuanzhuan');
+        })
+        $('#xqlb').click(function () {
+            $('#fjss').removeClass('active');
+            $('#xqlb').addClass('active');
+            $('.xqlb').toggle();
+            $('.xqlb').siblings().hide();
+            $('#fjss i').removeClass('xuanzhuan');
+        })
+    </script>
+</body>
+</html>
